@@ -64,7 +64,21 @@ done
 # EOF
 # fi
 
-echo " ===== Greating GATEWAy v.2.0 ===== "
+echo ""
+echo " ===== Creating GATEWAy v.2.0 ===== "
+
+# --------------------------------------
+# unzip v.1.0
+# --------------------------------------
+if [[ ! -e data/283_2_FoodWebDataBase_2018_12_10.csv ]]
+then
+  echo "  - Unzipping v.1.0"
+  cd data
+  unzip v.1.0.zip
+  cd ..
+else 
+  echo "  - Already unzipped"
+fi
 
 # --------------------------------------
 # string manipulations of v.1.0
@@ -104,3 +118,6 @@ then
 else
   echo "  - Taxonomy already harmonized"
 fi
+
+echo " ================================== "
+echo ""
