@@ -1,0 +1,106 @@
+#!/bin/bash
+
+function usage { cat << EOF
+USAGE
+
+    bash pipeline.sh
+
+DESCRIPTION
+
+    Create the new version of the GATEWAy database
+
+
+OPTIONS
+
+    --verbose | -v          adds verbose output
+                            defaults to: no
+
+    --clean                 does EVERYTHING
+                            defaults to: no
+
+EOF
+}
+
+clean=no
+verbose=no
+
+for arg in "$@"
+do
+  case "$arg" in
+    -\?|--help)
+      usage
+      exit
+      ;;
+
+    --clean)
+      clean=yes
+      shift
+      ;;
+
+    -v|--verbose)
+      verbose=yes
+      shift
+      ;;
+
+    --)
+      shift
+      break
+      ;;
+
+    -*)
+      echo "unrecognized option: $1" >&2
+      exit 1
+      ;;
+
+    *)
+      break
+      ;;
+  esac
+done
+
+# if [[ $verbose == yes ]]
+# then
+#   cat << EOF
+# EOF
+# fi
+
+echo " ===== Greating GATEWAy v.2.0 ===== "
+
+# --------------------------------------
+# string manipulations of v.1.0
+# --------------------------------------
+if [[ $clean == yes ]] || [[ ! -e "steps/.cleaned" ]]
+then
+  echo "  - Cleaning strings"
+  cd data
+  bash ../scripts/clean-gateway.sh 283_2_FoodWebDataBase_2018_12_10.csv gateway-cleaned.csv &&
+  touch ../steps/.cleaned
+  cd ..
+else
+  echo "  - Already cleaned"
+fi
+
+# --------------------------------------
+# query against GBIF
+# --------------------------------------
+if [[ $clean == yes ]] || [[ ! -e "steps/.gbif" ]]
+then
+  echo "  - Querying GBIF"
+  python3 scripts/harmonize-taxonomy.py &&
+  touch steps/.gbif
+else
+  echo "  - GBIF already queried"
+fi
+
+# --------------------------------------
+# harmonize taxonomy
+# --------------------------------------
+if [[ $clean == yes ]] || [[ ! -e "steps/.harmonized" ]]
+then
+  echo "  - Harmonize taxonomy"
+  Rscript --vanilla scripts/harmonize-taxonomy.R \
+  data/gateway-cleaned.csv data/taxonomy.csv &&
+  touch steps/.harmonized
+else
+  echo "  - Taxonomy already harmonized"
+fi
