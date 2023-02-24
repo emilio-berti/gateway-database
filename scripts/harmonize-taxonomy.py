@@ -36,7 +36,7 @@ def parse(x):
   except:
     r = None
   if r is None or r.status_code != 200:
-    error('Request error')
+    error('        Request error')
     ans = None
   else:
     ans = r.json()[0]
@@ -122,7 +122,7 @@ for x in sp:
   # parse it to get canonical names (binomial)
   parsed = parse(x)
   if parsed is None:
-    error('Parsing error')
+    error('        Parsing error')
     add = not_found(x)
     res = pd.concat([res, add])
     continue
