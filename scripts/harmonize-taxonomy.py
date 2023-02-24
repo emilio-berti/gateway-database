@@ -114,11 +114,11 @@ api_matcher = 'https://api.gbif.org/v1/species/match?name={}&strict=true'
 api_fuzzy = 'https://api.gbif.org/v1/species/match?name={}&strict=false'
 
 j = 0
-message('Parsing GBIF...')
+message('   - parsing GBIF...')
 for x in sp:
   j += 1
-  if j % 100 == 0:
-    message('  species {} of {}'.format(j, len(sp)))
+  if j % 500 == 0:
+    message('        species {} of {}'.format(j, len(sp)))
   # parse it to get canonical names (binomial)
   parsed = parse(x)
   if parsed is None:

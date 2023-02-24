@@ -14,6 +14,7 @@ stopifnot("db" %in% ls())
 
 db <- read_csv(db, show_col_types = FALSE)
 files <- list.files("newdata", pattern = "csv", full.names = TRUE)
+message("    - ", length(files), " new datasets to add")
 newdata <- lapply(files, "read_csv", show_col_types = FALSE)
 newdata <- bind_rows(newdata)
 

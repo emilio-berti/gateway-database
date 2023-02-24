@@ -104,6 +104,8 @@ if [[ $clean == yes ]] || [[ ! -e "steps/.newdata" ]]
 then
   echo "  - Process new data"
   Rscript --vanilla scripts/mulder.R &&
+  Rscript --vanilla scripts/tagus.R &&
+  Rscript --vanilla scripts/extract-species-names.R &&
   touch steps/.newdata
 else
   echo "  - New data already processed"

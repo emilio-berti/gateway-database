@@ -31,7 +31,7 @@ not_found <- taxonomy |>
   pull(original) |> 
   length()
 
-message(" - ", not_found, " names not found in GBIF.")
+message("    - ", not_found, " names not found in GBIF.")
 
 # save changed to summary files ------
 taxonomy |> 
