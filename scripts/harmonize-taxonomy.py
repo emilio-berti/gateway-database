@@ -91,10 +91,8 @@ def status_key(x):
     return key
 
 data_dir = 'data/'
-d = pd.read_csv(data_dir + 'gateway-cleaned.csv')
-d = d[['res.taxonomy', 'con.taxonomy']]
-d = d.melt()
-sp = [x for x in d.value]
+d = pd.read_csv(data_dir + 'checklist.csv')
+sp = [x for x in d.species]
 sp = set(sp)
 original = [x for x in sp] # to merge taxonomies later on
 sp = [x.replace('Order ', '') for x in sp]
@@ -116,7 +114,7 @@ api_matcher = 'https://api.gbif.org/v1/species/match?name={}&strict=true'
 api_fuzzy = 'https://api.gbif.org/v1/species/match?name={}&strict=false'
 
 j = 0
-warning('Parsing GBIF...')
+message('Parsing GBIF...')
 for x in sp:
   j += 1
   if j % 100 == 0:

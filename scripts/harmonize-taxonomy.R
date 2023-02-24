@@ -8,10 +8,8 @@ if (!interactive()) {
   args <- commandArgs(trailingOnly = TRUE)
   db <- args[1]
   taxonomy <- args[2]
-  message("   -- Database file: ", db)
-  message("   -- Taxonomy backbone: ", taxonomy)
 } else {
-  db <- file.path(data_dir, "gateway-cleaned.csv")
+  db <- file.path(data_dir, "gateway-combined.csv")
   taxonomy <- file.path(data_dir, "taxonomy.csv")
 }
 stopifnot("db" %in% ls())
@@ -19,10 +17,12 @@ stopifnot("taxonomy" %in% ls())
 
 db <- read_csv(db, show_col_types = FALSE)
 shape <- dim(db)
-taxonomy <- taxonomy |> 
-  read_csv(show_col_types = FALSE) |> 
-  select(-`...1`) |> 
-  distinct_all()
+taxonomy <- suppressMessages(
+  taxonomy |> 
+    read_csv(show_col_types = FALSE) |> 
+    select(-`...1`) |> 
+    distinct_all()
+)
 
 # count not found ----------
 not_found <- taxonomy |> 

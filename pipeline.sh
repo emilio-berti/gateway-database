@@ -2,22 +2,20 @@
 
 function usage { cat << EOF
 USAGE
-
     bash pipeline.sh
 
 DESCRIPTION
-
     Create the new version of the GATEWAy database
 
-
 OPTIONS
-
-    --verbose | -v          adds verbose output
+   --aggregate             aggregate lifestages
                             defaults to: no
 
     --clean                 does EVERYTHING
                             defaults to: no
 
+    --verbose | -v          adds verbose output
+                            defaults to: no
 EOF
 }
 
@@ -30,6 +28,11 @@ do
     -\?|--help)
       usage
       exit
+      ;;
+
+    --aggregate)
+      aggregate=yes
+      shift
       ;;
 
     --clean)
@@ -95,6 +98,18 @@ else
 fi
 
 # --------------------------------------
+# process new data
+# --------------------------------------
+if [[ $clean == yes ]] || [[ ! -e "steps/.newdata" ]]
+then
+  echo "  - Process new data"
+  Rscript --vanilla scripts/mulder.R &&
+  touch steps/.newdata
+else
+  echo "  - New data already processed"
+fi
+
+# --------------------------------------
 # query against GBIF
 # --------------------------------------
 if [[ $clean == yes ]] || [[ ! -e "steps/.gbif" ]]
@@ -107,17 +122,39 @@ else
 fi
 
 # --------------------------------------
+# add new data
+# --------------------------------------
+if [[ $clean == yes ]] || [[ ! -e "steps/.combined" ]]
+then
+  echo "  - Add new data"
+  Rscript --vanilla scripts/combine.R \
+  data/gateway-cleaned.csv &&
+  touch steps/.combined
+else
+  echo "  - New data already added"
+fi
+
+# --------------------------------------
 # harmonize taxonomy
 # --------------------------------------
 if [[ $clean == yes ]] || [[ ! -e "steps/.harmonized" ]]
 then
   echo "  - Harmonize taxonomy"
   Rscript --vanilla scripts/harmonize-taxonomy.R \
-  data/gateway-cleaned.csv data/taxonomy.csv &&
+  data/gateway-combined.csv data/taxonomy.csv &&
   touch steps/.harmonized
 else
   echo "  - Taxonomy already harmonized"
 fi
+
+# --------------------------------------
+# final summary
+# --------------------------------------
+echo "  - Summary:"
+fw=$(cat data/gateway-harmonized.csv | cut -d ',' -f 44 | sort | uniq | wc -l)
+n=$(wc -l data/gateway-harmonized.csv | cut -d ' ' -f 1)
+echo "    -- $fw unique food webs"
+echo "    -- $n unique interactions"
 
 echo " ================================== "
 echo ""
