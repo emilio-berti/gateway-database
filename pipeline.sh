@@ -67,6 +67,9 @@ done
 # EOF
 # fi
 
+bold=$(tput bold)
+normal=$(tput sgr0)
+
 echo ""
 echo " ===== Creating GATEWAy v.2.0 ===== "
 
@@ -147,6 +150,26 @@ then
   touch steps/.harmonized
 else
   echo "  - Taxonomy already harmonized"
+fi
+
+# --------------------------------------
+# rename as v.2.0
+# --------------------------------------
+cp data/gateway-harmonized.csv data/gateway-v.2.0.csv
+echo "  - New dataset is: ${bold}data/gateway-v.2.0.csv${normal}"
+
+# --------------------------------------
+# summary tables for website
+# --------------------------------------
+
+if [[ $clean == yes ]] || [[ ! -e "steps/.summarized" ]]
+then
+  echo "  - Summary Tables"
+  Rscript --vanilla scripts/summarize.R \
+  data/gateway-v.2.0.csv &&
+  touch steps/.summarized
+else
+  echo "  - Summary tables already created"
 fi
 
 # --------------------------------------
