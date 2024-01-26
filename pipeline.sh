@@ -40,6 +40,11 @@ do
       shift
       ;;
 
+    --add-new-data)
+      add=yes
+      shift
+      ;;
+
     -v|--verbose)
       verbose=yes
       shift
@@ -71,19 +76,20 @@ bold=$(tput bold)
 normal=$(tput sgr0)
 
 echo ""
-echo " ===== Creating GATEWAy v.2.0 ===== "
+echo " ${bold}===== Creating GATEWAy v.2.0 =====${normal} "
+echo ""
 
 # --------------------------------------
 # unzip v.1.0
 # --------------------------------------
 if [[ ! -e data/283_2_FoodWebDataBase_2018_12_10.csv ]]
 then
-  echo "  - Unzipping v.1.0"
+  echo "   - Unzipping v.1.0"
   cd data
   unzip v.1.0.zip
   cd ..
 else 
-  echo "  - Already unzipped"
+  echo "   - Already unzipped"
 fi
 
 # --------------------------------------
@@ -91,39 +97,50 @@ fi
 # --------------------------------------
 if [[ $clean == yes ]] || [[ ! -e "steps/.cleaned" ]]
 then
-  echo "  - Cleaning strings"
+  echo "   - Cleaning strings"
   cd data
   bash ../scripts/clean-gateway.sh 283_2_FoodWebDataBase_2018_12_10.csv gateway-cleaned.csv &&
   touch ../steps/.cleaned
   cd ..
 else
-  echo "  - Already cleaned"
+  echo "   - Already cleaned"
 fi
 
 # --------------------------------------
 # process new data
 # --------------------------------------
-if [[ $clean == yes ]] || [[ ! -e "steps/.newdata" ]]
+if [[ $clean == yes ]] || [[ ! -e "steps/.newdata" ]] && [[ $add == yes ]]
 then
-  echo "  - Process new data"
+  echo "   - Process new data"
   Rscript --vanilla scripts/mulder.R &&
   Rscript --vanilla scripts/tagus.R &&
-  Rscript --vanilla scripts/extract-species-names.R &&
   touch steps/.newdata
 else
-  echo "  - New data already processed"
+  echo "   - New data already processed"
 fi
+
+if [[ $clean == yes ]] || [[ ! -e "steps/.names" ]]
+then
+  echo "   - Extracting species names"
+  Rscript --vanilla scripts/extract-species-names.R &&
+  touch steps/.names
+else
+  echo "   - Names already extracted"
+fi
+
+
+
 
 # --------------------------------------
 # query against GBIF
 # --------------------------------------
 if [[ $clean == yes ]] || [[ ! -e "steps/.gbif" ]]
 then
-  echo "  - Querying GBIF"
+  echo "   - Querying GBIF"
   python3 scripts/harmonize-taxonomy.py &&
   touch steps/.gbif
 else
-  echo "  - GBIF already queried"
+  echo "   - GBIF already queried"
 fi
 
 # --------------------------------------
@@ -131,12 +148,12 @@ fi
 # --------------------------------------
 if [[ $clean == yes ]] || [[ ! -e "steps/.combined" ]]
 then
-  echo "  - Add new data"
+  echo "   - Add new data"
   Rscript --vanilla scripts/combine.R \
   data/gateway-cleaned.csv &&
   touch steps/.combined
 else
-  echo "  - New data already added"
+  echo "   - New data already added"
 fi
 
 # --------------------------------------
@@ -144,19 +161,19 @@ fi
 # --------------------------------------
 if [[ $clean == yes ]] || [[ ! -e "steps/.harmonized" ]]
 then
-  echo "  - Harmonize taxonomy"
+  echo "   - Harmonize taxonomy"
   Rscript --vanilla scripts/harmonize-taxonomy.R \
   data/gateway-combined.csv data/taxonomy.csv &&
   touch steps/.harmonized
 else
-  echo "  - Taxonomy already harmonized"
+  echo "   - Taxonomy already harmonized"
 fi
 
 # --------------------------------------
 # rename as v.2.0
 # --------------------------------------
 cp data/gateway-harmonized.csv data/gateway-v.2.0.csv
-echo "  - New dataset is: ${bold}data/gateway-v.2.0.csv${normal}"
+echo "   - New dataset is: ${bold}data/gateway-v.2.0.csv${normal}"
 
 # --------------------------------------
 # summary tables for website
@@ -164,22 +181,23 @@ echo "  - New dataset is: ${bold}data/gateway-v.2.0.csv${normal}"
 
 if [[ $clean == yes ]] || [[ ! -e "steps/.summarized" ]]
 then
-  echo "  - Summary Tables"
+  echo "   - Summary Tables"
   Rscript --vanilla scripts/summarize.R \
   data/gateway-v.2.0.csv &&
   touch steps/.summarized
 else
-  echo "  - Summary tables already created"
+  echo "   - Summary tables already created"
 fi
 
 # --------------------------------------
 # final summary
 # --------------------------------------
-echo "  - Summary:"
+echo "   - Summary:"
 fw=$(cat data/gateway-harmonized.csv | cut -d ',' -f 44 | sort | uniq | wc -l)
 n=$(wc -l data/gateway-harmonized.csv | cut -d ' ' -f 1)
 echo "    -- $fw unique food webs"
 echo "    -- $n unique interactions"
 
+echo ""
 echo " ================================== "
 echo ""
