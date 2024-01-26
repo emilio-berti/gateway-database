@@ -14,6 +14,10 @@ OPTIONS
     --clean                 does EVERYTHING
                             defaults to: no
 
+    --add-new-data          add new datasets
+                            defaults to: no
+                            this is used by the database maintainers when needed
+
     --verbose | -v          adds verbose output
                             defaults to: no
 EOF
