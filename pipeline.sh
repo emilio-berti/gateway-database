@@ -71,7 +71,7 @@ bold=$(tput bold)
 normal=$(tput sgr0)
 
 echo ""
-echo " ===== Creating GATEWAy v.2.0 ===== "
+echo " ========== Creating GATEWAy v.2.0 ========== "
 
 # --------------------------------------
 # unzip v.1.0
@@ -132,8 +132,7 @@ fi
 if [[ $clean == yes ]] || [[ ! -e "steps/.combined" ]]
 then
   echo "  - Add new data"
-  Rscript --vanilla scripts/combine.R \
-  data/gateway-cleaned.csv &&
+  Rscript --vanilla scripts/combine.R data/gateway-cleaned.csv &&
   touch steps/.combined
 else
   echo "  - New data already added"
@@ -146,7 +145,7 @@ if [[ $clean == yes ]] || [[ ! -e "steps/.harmonized" ]]
 then
   echo "  - Harmonize taxonomy"
   Rscript --vanilla scripts/harmonize-taxonomy.R \
-  data/gateway-combined.csv data/taxonomy.csv &&
+    data/gateway-combined.csv data/taxonomy.csv &&
   touch steps/.harmonized
 else
   echo "  - Taxonomy already harmonized"
@@ -159,27 +158,25 @@ cp data/gateway-harmonized.csv data/gateway-v.2.0.csv
 echo "  - New dataset is: ${bold}data/gateway-v.2.0.csv${normal}"
 
 # --------------------------------------
-# summary tables for website
+# rename and split
 # --------------------------------------
-
-if [[ $clean == yes ]] || [[ ! -e "steps/.summarized" ]]
+if [[ $clean == yes ]] || [[ ! -e "steps/.renamed" ]]
 then
-  echo "  - Summary Tables"
-  Rscript --vanilla scripts/summarize.R \
-  data/gateway-v.2.0.csv &&
-  touch steps/.summarized
+  echo "  - Rename fields and split tables:"
+  Rscript --vanilla scripts/rename.R data/gateway-v.2.0.csv &&
+  touch steps/.renamed
 else
-  echo "  - Summary tables already created"
+  echo "  - Fields already renamed and tables split"
 fi
 
 # --------------------------------------
-# final summary
+# summary
 # --------------------------------------
 echo "  - Summary:"
-fw=$(cat data/gateway-harmonized.csv | cut -d ',' -f 44 | sort | uniq | wc -l)
-n=$(wc -l data/gateway-harmonized.csv | cut -d ' ' -f 1)
+fw=$(wc -l data/foodwebs.csv | cut -d ' ' -f 1)
+n=$(wc -l data/interactions.csv | cut -d ' ' -f 1)
 echo "    -- $fw unique food webs"
 echo "    -- $n unique interactions"
 
-echo " ================================== "
+echo " ================================================== "
 echo ""

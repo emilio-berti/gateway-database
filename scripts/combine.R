@@ -16,7 +16,9 @@ db <- read_csv(db, show_col_types = FALSE)
 files <- list.files("newdata", pattern = "csv", full.names = TRUE)
 message("    - ", length(files), " new datasets to add")
 newdata <- lapply(files, "read_csv", show_col_types = FALSE)
-newdata <- bind_rows(newdata)
+newdata <- newdata |> 
+  bind_rows() |> 
+  mutate(study.site = geographic.location)
 
 db <- bind_rows(db, newdata)
 db |> write_csv(file.path(data_dir, "gateway-combined.csv"))

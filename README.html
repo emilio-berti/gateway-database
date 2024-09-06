@@ -1,0 +1,116 @@
+<h1 id="gateway-database-from-v.1-to-v.2">GATEWAy database from v.1 to
+v.2</h1>
+<p>Emilio Berti</p>
+<h1 id="change-log">Change log</h1>
+<h2 id="v.2.0">V.2.0</h2>
+<ol type="1">
+<li>Removed problematic characters from fields: - <code>,</code>
+replaced with <code>;</code> when within <code>"</code>. -
+<code>"</code> removed. - Multiple spaces trimmed to one space. -
+Convert all uppercase letters to lowercase.</li>
+<li>Add data from Mulder et al. (<em>citation needed</em>).</li>
+<li>Add data from Vinagre et al. (<em>citation_needed</em>).</li>
+<li>Harmonize taxonomy</li>
+<li>Rename columns following the Darwin Core standard: <a
+href="http://rs.tdwg.org/dwc/terms.htm#4"
+class="uri">http://rs.tdwg.org/dwc/terms.htm#4</a>.</li>
+</ol>
+<p>Additionally, tables and shapefiles are created to be inserted into a
+PostGIS database to feed the website server.</p>
+<h1 id="sql-database">SQL database</h1>
+<p>I re-structured the GATEWAy database into &lt;…&gt; tables:</p>
+<ol type="1">
+<li><span style="color:blue">Foodwebs</span></li>
+<li><span style="color:green">Species</span></li>
+<li><span style="color:red">Interactions</span></li>
+</ol>
+<p>The old database was a single csv file. I colored the columns of this
+file with the same color of the tables above. The symbol =&gt; show
+columns that have been renamed. E.g., <code>A</code> =&gt;
+<code>B</code> means <code>A</code> was renamed to <code>B</code>,
+following DarwinCore standards: <a
+href="http://rs.tdwg.org/dwc/terms.htm#4"
+class="uri">http://rs.tdwg.org/dwc/terms.htm#4</a>. All column names
+have been converted to camelCase. Strike-through columns have been
+dropped.</p>
+<!-- foodwebs -->
+<p><span style="color:blue">foodwebName</span><br> <span
+style="color:blue">longitude =&gt; decimalLongitude</span><br> <span
+style="color:blue">latitude =&gt; decimalLatitude</span> <span
+style="color:blue">ecosystemType</span><br> <span
+style="color:blue">geographicLocation =&gt; locality</span><br> <span
+style="color:blue">studySite</span><br> <span
+style="color:blue">altitude =&gt; verbatimElevation</span><br> <span
+style="color:blue">depth =&gt; verbatimDepth</span><br> <span
+style="color:blue">samplingTime</span><br> <span
+style="color:blue">sampling.start.year =&gt;
+EarliestDateCollected</span><br> <span
+style="color:blue">sampling.end.year =&gt;
+LatestDateCollected</span><br> <!-- species --> <del>key</del><br> <span
+style="color:green">taxonID</span>, identified by the combination of all
+fields related to species<br> <span style="color:green">taxonomy =&gt;
+acceptedTaxonName</span><br> <span style="color:green">common =&gt;
+vernacularName</span><br> <span style="color:green">lifeStage</span><br>
+<span style="color:green">metabolic.type =&gt; metabolicType</span><br>
+<span style="color:green">movement.type =&gt; movementType</span><br>
+<span style="color:green">mass.min.g. =&gt; lowestMass</span>, in
+grams<br> <span style="color:green">mass.max.g. =&gt;
+highestMass</span>, in grams<br> <span style="color:green">mass.mean.g.
+=&gt; meanMass</span>, in grams<br> <span
+style="color:green">length.min.cm. =&gt; shortestLength</span>, in
+cm<br> <span style="color:green">length.max.cm. =&gt;
+longestLength</span>, in cm<br> <span
+style="color:green">length.mean.cm. =&gt; meanLength</span>, in cm<br>
+<span style="color:green">size.method =&gt; sizeMethod</span><br> <span
+style="color:green">size.citation =&gt; sizeReference</span><br> <span
+style="color:green">taxonomy.status =&gt; taxonomicStatus</span><br>
+<span style="color:green">taxonomy.level =&gt; taxonRank</span><br>
+<!-- interactions --> <del>autoid</del><br> <span
+style="color:red">interactionID</span>, identified by unique taxonID and
+foodwebName<br> <span style="color:red">interactionType</span><br> <span
+style="color:red">interactionDimensionality</span><br> <span
+style="color:red">link.methodology =&gt; interactionMethod</span><br>
+<span style="color:red">link.citation =&gt;
+interactionReference</span><br> <del>interaction.classification</del>,
+cannot figure out what this is <br> <span
+style="color:red">link.citation =&gt; interactionReference</span><br>
+<span style="color:red">notes =&gt; interactionRemarks</span><br></p>
+<h1 id="pipeline">Pipeline</h1>
+<p>To run the whole pipeline at once:</p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">bash</span> pipeline.sh</span></code></pre></div>
+<p>This runs (in order):</p>
+<ol type="1">
+<li>Clean v.1.0 for encoding/parsing errors: <a
+href="scripts/clean-gateway">scripts/clean-gateway</a>.</li>
+<li>Process new data to add to the database: <a
+href="scripts/mulder.R">scripts/mulder.R</a> and <a
+href="scripts/tagus.R">scripts/tagus.R</a>.</li>
+<li>Extract species names: <a
+href="scripts/extract-species-names.R">scripts/extract-species-names.R</a>.</li>
+<li>Query the species names against GBIF: <a
+href="harmonize-taxonomy.py">harmonize-taxonomy.py</a>.</li>
+<li>Combine v.1.0 with new data: <a
+href="scripts/combine.R">scripts/combine.R</a>.</li>
+<li>Harmonize taxonomy of the database: <a
+href="harmonize-taxonomy.R">harmonize-taxonomy.R</a>.</li>
+<li>Saves the new database as <em>gateway-v.2.0.csv</em>.</li>
+<li>Rename fields and split table into relational tables: <a
+href="scripts/rename.R">scripts/rename.R</a>.</li>
+</ol>
+<p>Some of this steps can take some time. To avoid re-running already
+completed steps, once the step is completed successfully an hidden
+(empty) file is added to the <a href="steps">steps</a> folder. Steps
+that have such files will not be re-ran. You can re-run the whole
+pipeline from scratch specifying the option <em>–clean</em>:</p>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">bash</span> pipeline.sh <span class="at">--clean</span></span></code></pre></div>
+<p>To see available options and usage:
+<code>bash pipeline.sh --help</code>.</p>
+<h1 id="postgis-database">PostGIS database</h1>
+<h2 id="create-database">Create database</h2>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">psql</span> <span class="at">-U</span> postgres</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="ex">CREATE</span> DATABASE gateway<span class="kw">;</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="ex">\c</span> gateway<span class="kw">;</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="ex">CREATE</span> EXTENSION postgis<span class="kw">;</span></span></code></pre></div>
