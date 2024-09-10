@@ -1,0 +1,876 @@
+species.code,full.name,class,first.name,species,M,tr.group,p165web,p35web,ref,bobi.col,species.order,old.order,afterstep1.col
+11006,Aglenchus agricola,nematodes,Aglenchus,agricola,0.044273815,11,1,1,chris,75,15,638,77
+11006,Aglenchus,nematodes,Aglenchus,,0.044273815,11,1,0,chris,74,14,768,76
+11011,Amplimerlinius caroli,nematodes,Amplimerlinius,caroli,0.1663125,11,1,0,Ferris,85,25,678,87
+11011,Amplimerlinius icarus,nematodes,Amplimerlinius,icarus,NA,11,0,0,chris,86,26,796,88
+11011,Amplimerlinius,nematodes,Amplimerlinius,,NA,11,0,0,chris,84,24,795,86
+11014,Anguinidae,nematodes,Anguinidae,,0.043216456,11,1,1,chris,92,32,641,94
+11022,Basiria,nematodes,Basiria,,NA,11,0,0,chris,114,54,801,116
+11025,Bitylenchus,nematodes,Bitylenchus,,NA,11,0,0,chris,120,60,803,122
+11026,Boleodorus thylactus,nematodes,Boleodorus,thylactus,NA,11,0,0,chris,122,62,805,124
+11026,Boleodorus,nematodes,Boleodorus,,NA,11,0,0,chris,121,61,804,123
+11041,Coslenchus costatus,nematodes,Coslenchus,costatus,0.075534198,11,1,1,chris,152,92,621,154
+11041,Coslenchus rhombus,nematodes,Coslenchus,rhombus,0.075534198,11,1,0,chris,153,93,757,155
+11041,Coslenchus,nematodes,Coslenchus,,0.075534198,11,1,1,chris,151,91,620,153
+11042,Criconematidae,nematodes,Criconematidae,,0.088273418,11,1,1,chris,154,94,614,156
+11054,Dolichodoridae,nematodes,Dolichodoridae,,0.06510779,11,1,1,chris,177,117,630,179
+11056,Dolichorhynchus lamelliferus,nematodes,Dolichorhynchus,lamelliferus,0.0881625,11,1,1,Ferris,180,120,546,182
+11056,Dolichorhynchus,nematodes,Dolichorhynchus,,0.0623375,11,1,1,Ferris,179,119,545,181
+11062,Ecphyadophora tenuissima,nematodes,Ecphyadophora,tenuissima,0.001857575,11,1,0,Ferris,191,131,696,193
+11062,Ecphyadophora,nematodes,Ecphyadophora,,NA,11,0,0,chris,190,130,829,192
+11070,Filenchus discrepans,nematodes,Filenchus,discrepans,0.046322993,11,0,0,chris,220,160,933,222
+11070,Filenchus ditissimus,nematodes,Filenchus,ditissimus,0.046322993,11,0,0,chris,221,161,934,223
+11070,Filenchus helenae,nematodes,Filenchus,helenae,0.046322993,11,0,0,chris,222,162,935,224
+11070,Filenchus magnus,nematodes,Filenchus,magnus,0.046322993,11,0,0,chris,223,163,936,225
+11070,Filenchus microdorus,nematodes,Filenchus,microdorus,0.046322993,11,0,0,chris,224,164,937,226
+11070,Filenchus misellus,nematodes,Filenchus,misellus,0.046322993,11,0,0,chris,225,165,938,227
+11070,Filenchus quartus,nematodes,Filenchus,quartus,0.046322993,11,0,0,chris,226,166,939,228
+11070,Filenchus sandneri,nematodes,Filenchus,sandneri,0.046322993,11,0,0,chris,227,167,940,229
+11070,Filenchus terrestris,nematodes,Filenchus,terrestris,0.046322993,11,0,0,chris,228,168,941,230
+11070,Filenchus vulgaris,nematodes,Filenchus,vulgaris,0.046322993,11,1,1,chris,229,169,637,231
+11070,Filenchus zaphari,nematodes,Filenchus,zaphari,0.046322993,11,0,0,chris,230,170,942,232
+11070,Filenchus,nematodes,Filenchus,,0.046322993,11,1,1,chris,219,159,636,221
+11071,Geocenamus,nematodes,Geocenamus,,NA,11,0,0,chris,231,171,836,233
+11073,Gracilacus goodeyi,nematodes,Gracilacus,goodeyi,NA,11,0,0,chris,234,174,837,236
+11073,Gracilacus,nematodes,Gracilacus,,0.004096,11,1,0,Ferris,233,173,699,235
+11074,Helicotylenchus canadensis,nematodes,Helicotylenchus,canadensis,0.080796389,11,0,0,chris,236,176,924,238
+11074,Helicotylenchus digonicus,nematodes,Helicotylenchus,digonicus,0.080796389,11,1,0,chris,237,177,753,239
+11074,Helicotylenchus paxili,nematodes,Helicotylenchus,paxili,0.080796389,11,1,0,chris,238,178,754,240
+11074,Helicotylenchus pseudorobustus,nematodes,Helicotylenchus,pseudorobustus,0.080796389,11,1,1,chris,239,179,617,241
+11074,Helicotylenchus varicaudatus,nematodes,Helicotylenchus,varicaudatus,0.080796389,11,1,0,chris,240,180,755,242
+11074,Helicotylenchus vulgaris,nematodes,Helicotylenchus,vulgaris,0.080796389,11,0,0,chris,241,181,925,243
+11074,Helicotylenchus,nematodes,Helicotylenchus,,0.080796389,11,1,1,chris,235,175,616,237
+11075,Hemicycliophora conida,nematodes,Hemicycliophora,conida,NA,11,0,0,chris,243,183,838,245
+11075,Hemicycliophora thornei,nematodes,Hemicycliophora,thornei,0.123725,11,1,1,Ferris,244,184,547,246
+11075,Hemicycliophora typica,nematodes,Hemicycliophora,typica,0.065574402,11,1,0,Ferris,245,185,701,247
+11075,Hemicycliophora,nematodes,Hemicycliophora,,0.1086625,11,1,0,Ferris,242,182,700,244
+11077,Heterodera,nematodes,Heterodera,,0.065517679,11,1,1,chris,249,189,629,251
+11078,Heteroderidae,nematodes,Heteroderidae,,NA,11,0,0,chris,250,190,840,252
+11080,Hoplolaimidae,nematodes,Hoplolaimidae,,0.040656213,11,1,1,chris,253,193,643,255
+11083,Lelenchus leptosoma,nematodes,Lelenchus,leptosoma,0.005175,11,1,0,Ferris,261,201,706,263
+11083,Lelenchus,nematodes,Lelenchus,,0.005175,11,1,0,Ferris,260,200,705,262
+11085,Longidorella,nematodes,Longidorella,,NA,11,0,0,chris,264,204,847,266
+11086,Longidoridae,nematodes,Longidoridae,,NA,11,0,0,chris,265,205,848,267
+11087,Longidorus elongatus,nematodes,Longidorus,elongatus,2.359163439,11,1,0,chris,267,207,728,269
+11087,Longidorus,nematodes,Longidorus,,2.359163439,11,1,1,chris,266,206,558,268
+11088,Macroposthonia,nematodes,Macroposthonia,,NA,11,0,0,chris,268,208,849,270
+11089,Macrotrophurus,nematodes,Macrotrophurus,,NA,11,0,0,chris,269,209,850,271
+11090,Malenchus acarayensis,nematodes,Malenchus,acarayensis,0.023368893,11,1,1,chris,271,211,662,273
+11090,Malenchus andrassyi,nematodes,Malenchus,andrassyi,0.023368893,11,1,1,chris,272,212,663,274
+11090,Malenchus bryophilus,nematodes,Malenchus,bryophilus,0.023368893,11,0,0,chris,273,213,955,275
+11090,Malenchus,nematodes,Malenchus,,0.023368893,11,1,1,chris,270,210,661,272
+11091,Meloidogyne chitwoodi,nematodes,Meloidogyne,chitwoodi,0.025839065,11,1,0,chris,275,215,779,277
+11091,Meloidogyne fallax,nematodes,Meloidogyne,fallax,0.025839065,11,0,0,chris,276,216,953,278
+11091,Meloidogyne hapla,nematodes,Meloidogyne,hapla,0.025839065,11,1,0,chris,277,217,780,279
+11091,Meloidogyne heterodera,nematodes,Meloidogyne,heterodera,0.025839065,11,0,0,chris,278,218,954,280
+11091,Meloidogyne naasi,nematodes,Meloidogyne,naasi,0.025839065,11,1,1,chris,279,219,660,281
+11091,Meloidogyne,nematodes,Meloidogyne,,0.025839065,11,1,1,chris,274,214,659,276
+11092,Merlinius nanus,nematodes,Merlinius,nanus,NA,11,0,0,chris,281,221,852,283
+11092,Merlinius processus,nematodes,Merlinius,processus,NA,11,0,0,chris,282,222,853,284
+11092,Merlinius,nematodes,Merlinius,,NA,11,0,0,chris,280,220,851,282
+11107,Nagelus alpensis,nematodes,Nagelus,alpensis,NA,11,0,0,chris,311,251,859,313
+11107,Nagelus hexagrammus,nematodes,Nagelus,hexagrammus,NA,11,0,0,chris,312,252,860,314
+11107,Nagelus,nematodes,Nagelus,,0.0744375,11,1,0,Ferris,310,250,709,312
+11109,Neopsilenchus,nematodes,Neopsilenchus,,0.0235125,11,1,0,Ferris,314,254,710,316
+11110,Neothada cancellata,nematodes,Neothada,cancellata,NA,11,0,0,chris,316,256,862,318
+11110,Neothada,nematodes,Neothada,,NA,11,0,0,chris,315,255,861,317
+11119,Paratrichodorus pachydermus,nematodes,Paratrichodorus,pachydermus,0.117142019,11,0,0,chris,334,274,921,336
+11119,Paratrichodorus teres,nematodes,Paratrichodorus,teres,0.117142019,11,1,1,chris,335,275,603,337
+11119,Paratrichodorus,nematodes,Paratrichodorus,,0.117142019,11,1,1,chris,333,273,602,335
+11120,Paratrophurus,nematodes,Paratrophurus,,NA,11,0,0,chris,336,276,868,338
+11121,Paratylenchidae,nematodes,Paratylenchidae,,NA,11,0,0,chris,337,277,869,339
+11122,Paratylenchus bukowinensis,nematodes,Paratylenchus,bukowinensis,0.028510395,11,0,0,chris,339,279,949,341
+11122,Paratylenchus goodeyi,nematodes,Paratylenchus,goodeyi,0.028510395,11,0,0,chris,340,280,950,342
+11122,Paratylenchus hamatus,nematodes,Paratylenchus,hamatus,0.028510395,11,1,0,chris,341,281,774,343
+11122,Paratylenchus microdorus,nematodes,Paratylenchus,microdorus,0.028510395,11,1,0,chris,342,282,775,344
+11122,Paratylenchus nanus,nematodes,Paratylenchus,nanus,0.028510395,11,1,1,chris,343,283,652,345
+11122,Paratylenchus neoamblycephalus,nematodes,Paratylenchus,neoamblycephalus,0.028510395,11,1,0,chris,344,284,776,346
+11122,Paratylenchus projectus,nematodes,Paratylenchus,projectus,0.028510395,11,1,1,chris,345,285,653,347
+11122,Paratylenchus similis,nematodes,Paratylenchus,similis,0.028510395,11,1,0,chris,346,286,777,348
+11122,Paratylenchus straeleni,nematodes,Paratylenchus,straeleni,0.028510395,11,0,0,chris,347,287,951,349
+11122,Paratylenchus tatae,nematodes,Paratylenchus,tatae,0.028510395,11,0,0,chris,348,288,952,350
+11122,Paratylenchus,nematodes,Paratylenchus,,0.028510395,11,1,1,chris,338,278,651,340
+11128,Pratylenchidae,nematodes,Pratylenchidae,,0.1338875,11,1,0,Ferris,367,307,714,369
+11129,Pratylenchus crenatus,nematodes,Pratylenchus,crenatus,0.029735755,11,1,1,chris,370,310,648,372
+11129,Pratylenchus fallax,nematodes,Pratylenchus,fallax,0.029735755,11,1,0,chris,371,311,771,373
+11129,Pratylenchus neglectus,nematodes,Pratylenchus,neglectus,0.029735755,11,1,0,chris,372,312,772,374
+11129,Pratylenchus penetrans,nematodes,Pratylenchus,penetrans,0.029735755,11,1,1,chris,373,313,649,375
+11129,Pratylenchus pratensis,nematodes,Pratylenchus,pratensis,0.029735755,11,0,0,chris,374,314,947,376
+11129,Pratylenchus thornei,nematodes,Pratylenchus,thornei,0.029735755,11,0,0,chris,375,315,948,377
+11129,Pratylenchus vulnus,nematodes,Pratylenchus,vulnus,0.029735755,11,1,1,chris,376,316,650,378
+11129,Pratylenchus,nematodes,Pratylenchus,,0.029735755,11,1,1,chris,369,309,647,371
+11137,Psilenchidae,nematodes,Psilenchidae,,NA,11,0,0,chris,395,335,876,397
+11138,Psilenchus aestuarius,nematodes,Psilenchus,aestuarius,NA,11,0,0,chris,397,337,877,399
+11138,Psilenchus hilarulus,nematodes,Psilenchus,hilarulus,NA,11,0,0,chris,398,338,878,400
+11138,Psilenchus,nematodes,Psilenchus,,0.0611125,11,1,1,Ferris,396,336,554,398
+11141,Quinisulcius capitatus,nematodes,Quinisulcius,capitatus,0.033345833,11,1,1,Ferris,405,345,556,407
+11141,Quinisulcius,nematodes,Quinisulcius,,0.03335,11,1,1,Ferris,404,344,555,406
+11144,Rotylenchus buxophilus,nematodes,Rotylenchus,buxophilus,0.225202453,11,0,0,chris,414,354,910,416
+11144,Rotylenchus goodeyi,nematodes,Rotylenchus,goodeyi,0.225202453,11,0,0,chris,415,355,911,417
+11144,Rotylenchus robustus,nematodes,Rotylenchus,robustus,0.225202453,11,1,1,chris,416,356,577,418
+11144,Rotylenchus uniformis,nematodes,Rotylenchus,uniformis,0.225202453,11,1,1,chris,417,357,578,419
+11144,Rotylenchus,nematodes,Rotylenchus,,0.225202453,11,1,1,chris,413,353,576,415
+11145,Scutylenchus quadrifer,nematodes,Scutylenchus,quadrifer,NA,11,0,0,chris,419,359,883,421
+11145,Scutylenchus,nematodes,Scutylenchus,,NA,11,0,0,chris,418,358,882,420
+11154,Trichodoridae,nematodes,Trichodoridae,,0.154575,11,1,1,Ferris,439,379,557,441
+11155,Trichodorus primitivus,nematodes,Trichodorus,primitivus,0.090124289,11,0,0,chris,441,381,923,443
+11155,Trichodorus similis,nematodes,Trichodorus,similis,0.090124289,11,1,1,chris,442,382,613,444
+11155,Trichodorus,nematodes,Trichodorus,,0.090124289,11,1,1,chris,440,380,612,442
+11159,Trophurus sculptus,nematodes,Trophurus,sculptus,NA,11,0,0,chris,451,391,888,453
+11159,Trophurus,nematodes,Trophurus,,NA,11,0,0,chris,450,390,887,452
+11163,Tylenchorhynchus bryobius,nematodes,Tylenchorhynchus,bryobius,0.108344513,11,1,0,chris,458,398,747,460
+11163,Tylenchorhynchus dubius,nematodes,Tylenchorhynchus,dubius,0.108344513,11,1,1,chris,459,399,605,461
+11163,Tylenchorhynchus maximus,nematodes,Tylenchorhynchus,maximus,0.108344513,11,1,1,chris,460,400,606,462
+11163,Tylenchorhynchus striatus,nematodes,Tylenchorhynchus,striatus,0.108344513,11,1,0,chris,461,401,748,463
+11163,Tylenchorhynchus,nematodes,Tylenchorhynchus,,0.108344513,11,1,1,chris,457,397,604,459
+11169,Xiphinema diversicaudatum,nematodes,Xiphinema,diversicaudatum,1.538114873,11,1,0,Ferris,477,417,727,479
+11169,Xiphinema,nematodes,Xiphinema,,0.6408375,11,1,0,Ferris,476,416,726,478
+12001,Achipteria coleoptrata,micro-arthropods,Achipteria,coleoptrata,1.097075097,12,1,1,chris,759,547,190,761
+12011,Atropacarus striculus,micro-arthropods,Atropacarus,striculus,0.897227689,12,1,0,chris,783,571,357,785
+12021,Camisia,micro-arthropods,Camisia,,2.638011731,12,1,0,chris,796,584,306,798
+12028,Coccotydeus,micro-arthropods,Coccotydeus,,0.068614369,12,1,0,chris,814,602,412,816
+12042,Eriophyidae,micro-arthropods,Eriophyidae,,0.123275793,12,1,0,chris,850,638,407,852
+12049,Galumna lanceata,micro-arthropods,Galumna,lanceata,1.490531246,12,1,0,chris,876,664,327,878
+12049,Galumna obvia,micro-arthropods,Galumna,obvia,1.490531246,12,1,1,chris,877,665,179,879
+12049,Galumna,micro-arthropods,Galumna,,1.490531246,12,1,1,chris,875,663,178,877
+12066,Ledermuelleria,micro-arthropods,Ledermuelleria,,0.642937743,12,1,0,chris,923,711,369,925
+12078,Microtritia minima,micro-arthropods,Microtritia,minima,0.210351452,12,1,1,chris,968,756,237,970
+12082,Nanorchestes,micro-arthropods,Nanorchestes,,0.194202315,12,1,1,chris,974,762,241,976
+12085,Nothrus pratensis,micro-arthropods,Nothrus,pratensis,2.12853798,12,0,0,chris,983,771,485,985
+12085,Nothrus silvestris,micro-arthropods,Nothrus,silvestris,2.12853798,12,1,1,chris,984,772,168,986
+12091,Oribatula tibialis,micro-arthropods,Oribatula,tibialis,0.672371386,12,1,0,chris,995,783,366,997
+12092,Pachygnatidae,micro-arthropods,Pachygnatidae,,0.385365916,12,1,1,chris,997,785,226,999
+12098,Penthaleus,micro-arthropods,Penthaleus,,2.820196248,12,1,0,chris,1025,813,305,1027
+12099,Penthalodidae,micro-arthropods,Penthalodidae,,0.880072514,12,1,1,chris,1026,814,197,1028
+12102,Phthiracarus crenophilus,micro-arthropods,Phthiracarus,crenophilus,0.572281541,12,0,0,chris,1039,827,507,1041
+12102,Phthiracarus ferrugineus,micro-arthropods,Phthiracarus,ferrugineus,0.572281541,12,1,0,chris,1040,828,372,1042
+12102,Phthiracarus globosus,micro-arthropods,Phthiracarus,globosus,0.572281541,12,0,0,chris,1041,829,508,1043
+12102,Phthiracarus,micro-arthropods,Phthiracarus,,0.572281541,12,1,0,chris,1038,826,371,1040
+12104,Platynothrus peltifer,micro-arthropods,Platynothrus,peltifer,2.563920216,12,1,1,chris,1044,832,167,1046
+12104,Platynothrus,micro-arthropods,Platynothrus,,2.563920216,12,0,0,chris,1043,831,483,1045
+12117,Rhizoglyphus,micro-arthropods,Rhizoglyphus,,0.505807898,12,1,1,chris,1079,867,216,1081
+12130,Steganacarus magnus,micro-arthropods,Steganacarus,magnus,0.82961803,12,1,0,chris,1111,899,359,1113
+12130,Steganacarus,micro-arthropods,Steganacarus,,0.82961803,12,1,1,chris,1110,898,200,1112
+12139,Tydeidae,micro-arthropods,Tydeidae,,0.123275793,12,1,1,chris,1143,931,253,1145
+13001,Allacma fusca,micro-arthropods,Allacma,fusca,0.378,13,1,0,didden94,762,550,260,764
+13005,Dicyrtoma fusca,micro-arthropods,Dicyrtoma,fusca,0.378,13,1,0,didden94,833,621,261,835
+13007,Entomobrya lanuginosa,micro-arthropods,Entomobrya,lanuginosa,13.41460241,13,1,0,chris,841,629,274,843
+13007,Entomobrya nivalis,micro-arthropods,Entomobrya,nivalis,13.41460241,13,1,0,chris,842,630,275,844
+13007,Entomobrya,micro-arthropods,Entomobrya,,13.41460241,13,1,0,chris,840,628,273,842
+13008,Entomobryidae,micro-arthropods,Entomobryidae,,3.26941465,13,1,0,chris,843,631,299,845
+13032,Sminthuridae,micro-arthropods,Sminthuridae,,0.123275793,13,1,1,chris,1099,887,252,1101
+13033,Sminthurides malmgreni,micro-arthropods,Sminthurides,malmgreni,0.505807877,13,1,1,chris,1101,889,219,1103
+13033,Sminthurides schoetti,micro-arthropods,Sminthurides,schoetti,0.505807877,13,0,0,chris,1102,890,511,1104
+13033,Sminthurides,micro-arthropods,Sminthurides,,0.505807877,13,1,0,chris,1100,888,384,1102
+13034,Sminthurinus elegans,micro-arthropods,Sminthurinus,elegans,2.075359708,13,0,0,chris,1104,892,486,1106
+13034,Sminthurinus,micro-arthropods,Sminthurinus,,2.075359708,13,1,1,chris,1103,891,170,1105
+13035,Sminthurus viridis,micro-arthropods,Sminthurus,viridis,13.41460214,13,1,1,chris,1106,894,144,1108
+13035,Sminthurus,micro-arthropods,Sminthurus,,13.41460214,13,1,0,chris,1105,893,277,1107
+13036,Sphaeridia pumilis,micro-arthropods,Sphaeridia,pumilis,0.796823627,13,1,1,chris,1109,897,205,1111
+13038,Symphyla,micro-arthropods,Symphyla,,4.739564612,13,1,0,chris,1128,916,288,1130
+21001,Achromadora,nematodes,Achromadora,,0.020098778,21,1,1,chris,61,1,666,63
+21015,Aphelenchidae,nematodes,Aphelenchidae,,NA,21,0,0,chris,94,34,798,96
+21016,Aphelenchoides bicaudatus,nematodes,Aphelenchoides,bicaudatus,0.015975996,21,1,1,chris,96,36,670,98
+21016,Aphelenchoides blastophthorus,nematodes,Aphelenchoides,blastophthorus,0.015975996,21,0,0,chris,97,37,956,99
+21016,Aphelenchoides composticola,nematodes,Aphelenchoides,composticola,0.015975996,21,1,1,chris,98,38,671,100
+21016,Aphelenchoides fragariae,nematodes,Aphelenchoides,fragariae,0.015975996,21,0,0,chris,99,39,957,101
+21016,Aphelenchoides helophilus,nematodes,Aphelenchoides,helophilus,0.015975996,21,0,0,chris,100,40,958,102
+21016,Aphelenchoides saprophilus,nematodes,Aphelenchoides,saprophilus,0.015975996,21,1,0,chris,101,41,784,103
+21016,Aphelenchoides sinodendroni,nematodes,Aphelenchoides,sinodendroni,0.015975996,21,1,0,chris,102,42,785,104
+21016,Aphelenchoides,nematodes,Aphelenchoides,,0.015975996,21,1,1,chris,95,35,669,97
+21017,Aphelenchoididae,nematodes,Aphelenchoididae,,NA,21,0,0,chris,103,43,799,105
+21018,Aphelenchus avenae,nematodes,Aphelenchus,avenae,0.037144482,21,1,0,chris,105,45,770,107
+21018,Aphelenchus,nematodes,Aphelenchus,,0.037144482,21,1,1,chris,104,44,644,106
+21048,Diphtherophora brevicollis,nematodes,Diphtherophora,brevicollis,0.041614522,21,0,0,chris,163,103,944,165
+21048,Diphtherophora communis,nematodes,Diphtherophora,communis,0.041614522,21,1,0,chris,164,104,769,166
+21048,Diphtherophora obesa,nematodes,Diphtherophora,obesa,0.041614522,21,0,0,chris,165,105,945,167
+21048,Diphtherophora,nematodes,Diphtherophora,,0.041614522,21,1,1,chris,162,102,642,164
+21053,Ditylenchus anchilisposomus,nematodes,Ditylenchus,anchilisposomus,NA,21,0,0,chris,172,112,822,174
+21053,Ditylenchus brevicauda,nematodes,Ditylenchus,brevicauda,0.0067625,21,1,0,Ferris,173,113,692,175
+21053,Ditylenchus intermedius,nematodes,Ditylenchus,intermedius,0.0267875,21,1,0,Ferris,174,114,693,176
+21053,Ditylenchus lutonensis,nematodes,Ditylenchus,lutonensis,NA,21,0,0,chris,175,115,823,177
+21053,Ditylenchus myceliophagus,nematodes,Ditylenchus,myceliophagus,NA,21,0,0,chris,176,116,824,178
+21053,Ditylenchus,nematodes,Ditylenchus,,0.074275,21,1,1,Ferris,171,111,544,173
+21084,Leptonchidae,nematodes,Leptonchidae,,NA,21,0,0,chris,263,203,846,265
+21112,Nothotylenchus,nematodes,Nothotylenchus,,NA,21,0,0,chris,318,258,863,320
+21136,Pseudhalenchus,nematodes,Pseudhalenchus,,NA,21,0,0,chris,394,334,875,396
+21160,Pleurotylenchus,nematodes,Pleurotylenchus,,0.021811526,21,1,1,chris,366,306,664,368
+21160,Tylenchidae,nematodes,Tylenchidae,,0.021811526,21,1,1,chris,452,392,665,454
+21161,Tylencholaimellus striatus,nematodes,Tylencholaimellus,striatus,0.035197877,21,1,0,Ferris,454,394,723,456
+21161,Tylencholaimellus,nematodes,Tylencholaimellus,,0.108725,21,1,0,Ferris,453,393,722,455
+21162,Tylencholaimus crassus,nematodes,Tylencholaimus,crassus,0.118895848,21,0,0,chris,456,396,920,458
+21162,Tylencholaimus,nematodes,Tylencholaimus,,0.118895848,21,1,1,chris,455,395,601,457
+21164,Tylenchus arcuatus,nematodes,Tylenchus,arcuatus,0.281572926,21,0,0,chris,463,403,907,465
+21164,Tylenchus davainei,nematodes,Tylenchus,davainei,0.281572926,21,0,0,chris,464,404,908,466
+21164,Tylenchus elegans,nematodes,Tylenchus,elegans,0.281572926,21,1,0,chris,465,405,738,467
+21164,Tylenchus,nematodes,Tylenchus,,0.281572926,21,0,0,chris,462,402,906,464
+21166,Tylolaimophorus minor,nematodes,Tylolaimophorus,minor,NA,21,0,0,chris,469,409,891,471
+21166,Tylolaimophorus typicus,nematodes,Tylolaimophorus,typicus,0.103758462,21,1,0,Ferris,470,410,725,472
+21166,Tylolaimophorus,nematodes,Tylolaimophorus,,0.1089875,21,1,0,Ferris,468,408,724,470
+22002,Adamaeus onustus,micro-arthropods,Adamaeus,onustus,5.754970081,22,1,0,chris,760,548,287,762
+22003,Adoristes ovatus,micro-arthropods,Adoristes,ovatus,1.627523143,22,1,0,chris,761,549,321,763
+22009,Astegistes pilosus,micro-arthropods,Astegistes,pilosus,1.00370134,22,1,0,chris,781,569,354,783
+22013,Banksinoma lanceolata,micro-arthropods,Banksinoma,lanceolata,0.385365916,22,1,1,chris,785,573,225,787
+22016,Belbidae,micro-arthropods,Belbidae,,1.58117923,22,1,0,chris,787,575,323,789
+22017,Berniniella bicarinata,micro-arthropods,Berniniella,bicarinata,0.163870743,22,1,0,chris,788,576,402,790
+22017,Berniniella lunaris,micro-arthropods,Berniniella,lunaris,0.163870743,22,0,0,chris,789,577,519,791
+22019,Brachychthoniidae,micro-arthropods,Brachychthoniidae,,0.129634136,22,1,1,chris,791,579,248,793
+22020,Brachychthonius berlesei,micro-arthropods,Brachychthonius,berlesei,0.129634136,22,1,1,chris,793,581,249,795
+22020,Brachychthonius impressus,micro-arthropods,Brachychthonius,impressus,0.129634136,22,0,0,chris,794,582,532,796
+22020,Brachychthonius,micro-arthropods,Brachychthonius,,0.129634136,22,1,0,chris,792,580,406,794
+22022,Cepheus dentatus,micro-arthropods,Cepheus,dentatus,1.674549881,22,1,0,chris,801,589,320,803
+22023,Ceratoppia bipilis,micro-arthropods,Ceratoppia,bipilis,2.075359834,22,1,0,chris,803,591,313,805
+22025,Chamobates borealis,micro-arthropods,Chamobates,borealis,0.614173013,22,1,1,chris,807,595,208,809
+22025,Chamobates pusillus,micro-arthropods,Chamobates,pusillus,0.614173013,22,1,1,chris,808,596,209,810
+22029,Cosmochthonius lanatus,micro-arthropods,Cosmochthonius,lanatus,0.281528486,22,1,0,chris,815,603,394,817
+22032,Damaeobelba minutissima,micro-arthropods,Damaeobelba,minutissima,0.210351452,22,1,0,chris,822,610,400,824
+22033,Damaeus auritus,micro-arthropods,Damaeus,auritus,2.34810591,22,1,0,chris,823,611,311,825
+22036,Diapterobates humeralis,micro-arthropods,Diapterobates,humeralis,1.770658541,22,1,0,chris,832,620,319,834
+22037,Dissorhina ornata,micro-arthropods,Dissorhina,ornata,0.235808538,22,1,1,chris,837,625,236,839
+22038,Diversipes,micro-arthropods,Diversipes,,0.378,22,1,0,didden94,838,626,262,840
+22039,Eniochthonius minutissimus,micro-arthropods,Eniochthonius,minutissimus,0.443505431,22,1,1,chris,839,627,222,841
+22040,Epicriopsis horridus,micro-arthropods,Epicriopsis,horridus,0.235808199,22,0,0,chris,845,633,516,847
+22040,Epicriopsis palustris,micro-arthropods,Epicriopsis,palustris,0.235808199,22,0,0,chris,846,634,517,848
+22040,Epicriopsis,micro-arthropods,Epicriopsis,,0.235808199,22,1,0,chris,844,632,399,846
+22044,Eulohmannia ribagai,micro-arthropods,Eulohmannia,ribagai,1.359658717,22,1,0,chris,855,643,329,857
+22048,Euzetes globulus,micro-arthropods,Euzetes,globulus,4.193474118,22,1,0,chris,867,655,291,869
+22053,Hemileius initialis,micro-arthropods,Hemileius,initialis,0.863084494,22,1,1,chris,885,673,198,887
+22054,Hermannia gibba,micro-arthropods,Hermannia,gibba,2.638011731,22,1,0,chris,887,675,308,889
+22054,Hermannia,micro-arthropods,Hermannia,,2.638011731,22,1,0,chris,886,674,307,888
+22059,Hypochthonius luteus,micro-arthropods,Hypochthonius,luteus,1.468293913,22,0,0,chris,903,691,489,905
+22059,Hypochthonius rufulus,micro-arthropods,Hypochthonius,rufulus,1.468293913,22,1,0,chris,904,692,328,906
+22060,Imparipes,micro-arthropods,Imparipes,,0.378,22,1,0,didden94,909,697,265,911
+22065,Lauroppia falcata,micro-arthropods,Lauroppia,falcata,0.186373601,22,0,0,chris,922,710,518,924
+22065,Lauroppia,micro-arthropods,Lauroppia,,0.186373601,22,1,1,chris,921,709,243,923
+22068,Liebstadia similis,micro-arthropods,Liebstadia,similis,0.932044964,22,1,1,chris,934,722,196,936
+22069,Linopodes,micro-arthropods,Linopodes,,0.378,22,1,0,didden94,935,723,267,937
+22070,Liochthonius alpestris,micro-arthropods,Liochthonius,alpestris,0.11104737,22,1,1,chris,937,725,255,939
+22070,Liochthonius brevis,micro-arthropods,Liochthonius,brevis,0.11104737,22,0,0,chris,938,726,534,940
+22070,Liochthonius neglectus,micro-arthropods,Liochthonius,neglectus,0.11104737,22,1,0,chris,939,727,410,941
+22070,Liochthonius perfusorius,micro-arthropods,Liochthonius,perfusorius,0.11104737,22,0,0,chris,940,728,535,942
+22070,Liochthonius sellnicki,micro-arthropods,Liochthonius,sellnicki,0.11104737,22,0,0,chris,941,729,536,943
+22070,Liochthonius simplex,micro-arthropods,Liochthonius,simplex,0.11104737,22,0,0,chris,942,730,537,944
+22070,Liochthonius strenzkei,micro-arthropods,Liochthonius,strenzkei,0.11104737,22,0,0,chris,943,731,538,945
+22070,Liochthonius,micro-arthropods,Liochthonius,,0.11104737,22,1,1,chris,936,724,254,938
+22074,Medioppia obsoleta,micro-arthropods,Medioppia,obsoleta,0.291168115,22,1,1,chris,959,747,231,961
+22074,Medioppia subpectinata,micro-arthropods,Medioppia,subpectinata,0.291168115,22,1,0,chris,960,748,393,962
+22076,Metabelba pulverulenta,micro-arthropods,Metabelba,pulverulenta,0.796823627,22,1,0,chris,966,754,363,968
+22076,Metabelba,micro-arthropods,Metabelba,,0.796823627,22,1,0,chris,965,753,362,967
+22077,Microppia minus,micro-arthropods,Microppia,minus,0.142838894,22,1,1,chris,967,755,247,969
+22079,Microtydeus subterraneus,micro-arthropods,Microtydeus,subterraneus,0.068614285,22,0,0,chris,970,758,540,972
+22079,Microtydeus,micro-arthropods,Microtydeus,,0.068614285,22,1,1,chris,969,757,259,971
+22080,Minunthozetes semirufus,micro-arthropods,Minunthozetes,semirufus,0.281528486,22,1,1,chris,971,759,232,973
+22081,Nanhermannia elegantula,micro-arthropods,Nanhermannia,elegantula,0.914552405,22,0,0,chris,972,760,504,974
+22081,Nanhermannia nana,micro-arthropods,Nanhermannia,nana,0.914552405,22,1,0,chris,973,761,356,975
+22086,Odontocepheus elongatus,micro-arthropods,Odontocepheus,elongatus,1.722264931,22,1,1,chris,985,773,174,987
+22087,Oppiella nova,micro-arthropods,Oppiella,nova,0.178707883,22,1,1,chris,989,777,244,991
+22088,Oppiidae,micro-arthropods,Oppiidae,,0.186373601,22,1,0,chris,990,778,401,992
+22089,Oribatella quadricornuta,micro-arthropods,Oribatella,quadricornuta,0.796823627,22,1,0,chris,993,781,364,995
+22095,Palaeacarus hystrinicus,micro-arthropods,Palaeacarus,hystrinicus,0.467927342,22,1,0,chris,1010,798,385,1012
+22101,Phauloppia lucorum,micro-arthropods,Phauloppia,lucorum,0.796823627,22,1,0,chris,1036,824,365,1038
+22101,Phauloppia saxicola,micro-arthropods,Phauloppia,saxicola,0.796823627,22,1,1,chris,1037,825,203,1039
+22109,Punctoribates punctum,micro-arthropods,Punctoribates,punctum,0.467927342,22,1,1,chris,1066,854,220,1068
+22109,Punctoribates quadrivertex,micro-arthropods,Punctoribates,quadrivertex,0.467927342,22,0,0,chris,1067,855,512,1069
+22112,Pygmephorus,micro-arthropods,Pygmephorus,,0.210351452,22,1,1,chris,1070,858,238,1072
+22113,Quadroppia hammerae,micro-arthropods,Quadroppia,hammerae,0.149686602,22,0,0,chris,1072,860,520,1074
+22113,Quadroppia longisetosa,micro-arthropods,Quadroppia,longisetosa,0.149686602,22,1,0,chris,1073,861,403,1075
+22113,Quadroppia,micro-arthropods,Quadroppia,,0.149686602,22,1,1,chris,1071,859,245,1073
+22114,Ramusella clavipectinata,micro-arthropods,Ramusella,clavipectinata,0.281528486,22,1,0,chris,1074,862,395,1076
+22114,Ramusella elliptica,micro-arthropods,Ramusella,elliptica,0.281528486,22,0,0,chris,1075,863,515,1077
+22121,Rhysotritia ardua,micro-arthropods,Rhysotritia,ardua,1.040544401,22,1,1,chris,1087,875,194,1089
+22121,Rhysotritia duplicata,micro-arthropods,Rhysotritia,duplicata,1.040544401,22,1,1,chris,1088,876,195,1090
+22123,Schwiebea,micro-arthropods,Schwiebea,,0.455633951,22,1,1,chris,1092,880,221,1094
+22126,Sellnickochthonius immaculatus,micro-arthropods,Sellnickochthonius,immaculatus,0.078253038,22,0,0,chris,1096,884,539,1098
+22126,Sellnickochthonius zelawaiensis,micro-arthropods,Sellnickochthonius,zelawaiensis,0.078253038,22,1,1,chris,1097,885,258,1099
+22127,Siteroptes,micro-arthropods,Siteroptes,,0.210351452,22,1,1,chris,1098,886,239,1100
+22128,Spatiodamaeus verticillipes,micro-arthropods,Spatiodamaeus,verticillipes,1.919933666,22,1,0,chris,1107,895,318,1109
+22129,Speleorchestes,micro-arthropods,Speleorchestes,,0.281528486,22,1,1,chris,1108,896,233,1110
+22132,Suctobelbella alloenasuta,micro-arthropods,Suctobelbella,alloenasuta,0.149686602,22,0,0,chris,1115,903,521,1117
+22132,Suctobelbella arcana,micro-arthropods,Suctobelbella,arcana,0.149686602,22,0,0,chris,1116,904,522,1118
+22132,Suctobelbella falcata,micro-arthropods,Suctobelbella,falcata,0.149686602,22,0,0,chris,1117,905,523,1119
+22132,Suctobelbella forsslundi,micro-arthropods,Suctobelbella,forsslundi,0.149686602,22,0,0,chris,1118,906,524,1120
+22132,Suctobelbella hamata,micro-arthropods,Suctobelbella,hamata,0.149686602,22,0,0,chris,1119,907,525,1121
+22132,Suctobelbella latirostris,micro-arthropods,Suctobelbella,latirostris,0.149686602,22,0,0,chris,1120,908,526,1122
+22132,Suctobelbella lobata,micro-arthropods,Suctobelbella,lobata,0.149686602,22,0,0,chris,1121,909,527,1123
+22132,Suctobelbella nasalis,micro-arthropods,Suctobelbella,nasalis,0.149686602,22,1,0,chris,1122,910,404,1124
+22132,Suctobelbella sarekensis,micro-arthropods,Suctobelbella,sarekensis,0.149686602,22,0,0,chris,1123,911,528,1125
+22132,Suctobelbella similis,micro-arthropods,Suctobelbella,similis,0.149686602,22,0,0,chris,1124,912,529,1126
+22132,Suctobelbella subcornigera,micro-arthropods,Suctobelbella,subcornigera,0.149686602,22,1,0,chris,1125,913,405,1127
+22132,Suctobelbella tuberculata,micro-arthropods,Suctobelbella,tuberculata,0.149686602,22,0,0,chris,1126,914,530,1128
+22132,Suctobelbella vera,micro-arthropods,Suctobelbella,vera,0.149686602,22,0,0,chris,1127,915,531,1129
+22132,Suctobelbella,micro-arthropods,Suctobelbella,,0.149686602,22,1,1,chris,1114,902,246,1116
+22135,Tectocepheus velatus,micro-arthropods,Tectocepheus,velatus,0.300972621,22,1,1,chris,1131,919,230,1133
+22135,Tectocepheus,micro-arthropods,Tectocepheus,,0.300972621,22,1,0,chris,1130,918,392,1132
+22136,Trachytes aegrota,micro-arthropods,Trachytes,aegrota,0.505807898,22,1,0,chris,1136,924,379,1138
+22137,Trichoribates novus,micro-arthropods,Trichoribates,novus,1.490531246,22,0,0,chris,1138,926,488,1140
+22137,Trichoribates trimaculatus,micro-arthropods,Trichoribates,trimaculatus,1.490531246,22,1,1,chris,1139,927,180,1141
+22140,Tyrophagus neiswanderi,micro-arthropods,Tyrophagus,neiswanderi,0.505807898,22,1,0,chris,1146,934,380,1148
+22140,Tyrophagus similis,micro-arthropods,Tyrophagus,similis,0.505807898,22,1,0,chris,1147,935,381,1149
+22140,Tyrophagus,micro-arthropods,Tyrophagus,,0.505807898,22,1,1,chris,1145,933,217,1147
+22999,Carabodes Willmanni,micro-arthropods,Carabodes,Willmanni,0.378,22,1,1,didden94,799,587,130,801
+22999,Eupalopsellidae,micro-arthropods,Eupalopsellidae,,0.136,22,1,1,didden94,856,644,131,858
+22999,Hypogeoppia hypogaeum,micro-arthropods,Hypogeoppia,hypogaeum,0.378,22,1,1,didden94,907,695,132,909
+22999,Leptus,micro-arthropods,Leptus,,1.176,72,1,1,didden94,931,719,133,933
+22999,Malaconothrus mollisetosus,micro-arthropods,Malaconothrus,mollisetosus,0.378,22,1,1,didden94,958,746,134,960
+22999,Ophidiotrichus tectus,micro-arthropods,Ophidiotrichus,tectus,0.378,22,1,1,didden94,988,776,137,990
+22999,Pantelozetes paolii,micro-arthropods,Pantelozetes,paolii,0.378,22,1,1,didden94,1011,799,138,1013
+22999,Tydeus,micro-arthropods,Tydeus,,0.136,22,1,1,didden94,1144,932,140,1146
+23002,Anurida,micro-arthropods,Anurida,,0.030044848,23,1,0,chris,772,560,413,774
+23003,Brachystomella parvula,micro-arthropods,Brachystomella,parvula,4.739559143,23,1,1,chris,795,583,152,797
+23004,Ceratophysella denticulata,micro-arthropods,Ceratophysella,denticulata,10.82391875,23,1,1,chris,802,590,145,804
+23009,Folsomia candida,micro-arthropods,Folsomia,candida,3.969859416,23,1,0,chris,869,657,292,871
+23009,Folsomia fimetarioides,micro-arthropods,Folsomia,fimetarioides,3.969859416,23,0,0,chris,870,658,479,872
+23009,Folsomia,micro-arthropods,Folsomia,,3.969859416,23,1,1,chris,868,656,157,870
+23010,Friesea mirabilis,micro-arthropods,Friesea,mirabilis,1.359658717,23,0,0,chris,872,660,491,874
+23010,Friesea truncata,micro-arthropods,Friesea,truncata,1.359658717,23,1,1,chris,873,661,182,875
+23011,Heteromurus nitidus,micro-arthropods,Heteromurus,nitidus,0.378,23,1,0,didden94,890,678,264,892
+23012,Hypogastrura assimilis,micro-arthropods,Hypogastrura,assimilis,4.739559143,23,1,0,chris,906,694,289,908
+23012,Hypogastrura,micro-arthropods,Hypogastrura,,4.739559143,23,1,1,chris,905,693,153,907
+23013,Isotoma anglicana,micro-arthropods,Isotoma,anglicana,39.53058885,23,0,0,chris,911,699,474,913
+23013,Isotoma antennalis,micro-arthropods,Isotoma,antennalis,39.53058885,23,0,0,chris,912,700,475,914
+23013,Isotoma viridis,micro-arthropods,Isotoma,viridis,39.53058885,23,1,0,chris,913,701,269,915
+23013,Isotoma,micro-arthropods,Isotoma,,39.53058885,23,1,1,chris,910,698,141,912
+23014,Isotomiella minor,micro-arthropods,Isotomiella,minor,3.26941465,23,1,1,chris,914,702,162,916
+23015,Isotomurus palustris,micro-arthropods,Isotomurus,palustris,30.63531463,23,1,1,chris,915,703,143,917
+23016,Lepidocyrtus cyaneus,micro-arthropods,Lepidocyrtus,cyaneus,8.515324612,23,1,1,chris,927,715,147,929
+23016,Lepidocyrtus lignorum,micro-arthropods,Lepidocyrtus,lignorum,8.515324612,23,1,1,chris,928,716,148,930
+23016,Lepidocyrtus violaceus,micro-arthropods,Lepidocyrtus,violaceus,8.515324612,23,1,0,chris,929,717,282,931
+23016,Lepidocyrtus,micro-arthropods,Lepidocyrtus,,8.515324612,23,1,1,chris,926,714,146,928
+23017,Megalothorax minimus,micro-arthropods,Megalothorax,minimus,0.505807898,23,1,0,chris,961,749,378,963
+23018,Mesaphorura macrochaeta,micro-arthropods,Mesaphorura,macrochaeta,2.075359834,23,1,1,chris,963,751,169,965
+23018,Mesaphorura,micro-arthropods,Mesaphorura,,2.075359834,23,1,0,chris,962,750,314,964
+23019,Neanura muscorum,micro-arthropods,Neanura,muscorum,30.63531463,23,1,0,chris,975,763,270,977
+23020,Neelides minutus,micro-arthropods,Neelides,minutus,1.359658717,23,1,0,chris,976,764,331,978
+23021,Onychiurus,micro-arthropods,Onychiurus,,4.739559143,23,1,1,chris,987,775,154,989
+23022,Orchesella cincta,micro-arthropods,Orchesella,cincta,30.63531463,23,1,0,chris,992,780,272,994
+23022,Orchesella,micro-arthropods,Orchesella,,30.63531463,23,1,0,chris,991,779,271,993
+23023,Paratullbergia callipygos,micro-arthropods,Paratullbergia,callipygos,3.969859416,23,1,0,chris,1019,807,293,1021
+23024,Parisotoma notabilis,micro-arthropods,Parisotoma,notabilis,2.638011731,23,1,1,chris,1021,809,166,1023
+23025,Pauropoda,micro-arthropods,Pauropoda,,0.378,23,1,1,didden94,1022,810,139,1024
+23026,Proisotoma minuta,micro-arthropods,Proisotoma,minuta,2.945102912,23,1,1,chris,1049,837,163,1051
+23026,Proisotoma,micro-arthropods,Proisotoma,,2.945102912,23,1,0,chris,1048,836,301,1050
+23027,Protaphorura armata,micro-arthropods,Protaphorura,armata,10.82391875,23,1,0,chris,1052,840,279,1054
+23027,Protaphorura,micro-arthropods,Protaphorura,,10.82391875,23,1,0,chris,1051,839,278,1053
+23028,Protura,micro-arthropods,Protura,,3.26941465,23,1,0,chris,1054,842,300,1056
+23029,Pseudachorutes,micro-arthropods,Pseudachorutes,,4.739559143,23,1,1,chris,1058,846,155,1060
+23030,Pseudisotoma sensibilis,micro-arthropods,Pseudisotoma,sensibilis,9.634417953,23,1,0,chris,1059,847,281,1061
+23031,Pseudosinella alba,micro-arthropods,Pseudosinella,alba,4.739559143,23,0,0,chris,1063,851,477,1065
+23031,Pseudosinella immaculata,micro-arthropods,Pseudosinella,immaculata,4.739559143,23,0,0,chris,1064,852,478,1066
+23031,Pseudosinella octopunctata,micro-arthropods,Pseudosinella,octopunctata,4.739559143,23,1,0,chris,1065,853,290,1067
+23037,Stenaphorurella quadrispina,micro-arthropods,Stenaphorurella,quadrispina,4.739559143,23,1,1,chris,1112,900,156,1114
+23039,Tomocerus flavescens,micro-arthropods,Tomocerus,flavescens,1.155128093,23,1,0,chris,1134,922,343,1136
+23039,Tomocerus vulgaris,micro-arthropods,Tomocerus,vulgaris,1.155128093,23,1,0,chris,1135,923,344,1137
+23039,Tomocerus,micro-arthropods,Tomocerus,,1.155128093,23,1,0,chris,1133,921,342,1135
+23040,Vertagopus cinereus,micro-arthropods,Vertagopus,cinereus,10.82391875,23,1,0,chris,1160,948,280,1162
+23041,Willemia,micro-arthropods,Willemia,,1.58117923,23,1,0,chris,1162,950,324,1164
+23999,Neotullbergia crassicuspis,micro-arthropods,Neotullbergia,crassicuspis,0.378,23,1,1,didden94,980,768,136,982
+24001,Achaeta aberrans,enchytraeids,Achaeta,aberrans,NA,24,1,0,NA,542,456,87,544
+24001,Achaeta abulba,enchytraeids,Achaeta,abulba,NA,24,1,1,NA,543,457,39,545
+24001,Achaeta bibulba,enchytraeids,Achaeta,bibulba,NA,24,1,1,NA,544,458,40,546
+24001,Achaeta bulbosa,enchytraeids,Achaeta,bulbosa,NA,24,0,0,NA,545,459,96,547
+24001,Achaeta camerani,enchytraeids,Achaeta,camerani,NA,24,1,1,NA,546,460,41,548
+24001,Achaeta eiseni,enchytraeids,Achaeta,eiseni,NA,24,1,1,NA,547,461,42,549
+24001,Achaeta parva,enchytraeids,Achaeta,parva,NA,24,1,1,NA,548,462,43,550
+24001,Achaeta Vesiculata,enchytraeids,Achaeta,Vesiculata,NA,24,1,1,NA,549,463,44,551
+24001,Achaeta,enchytraeids,Achaeta,,NA,24,1,1,NA,541,455,38,543
+24003,Cognettia glandulosa,enchytraeids,Cognettia,glandulosa,NA,24,1,1,NA,556,470,50,558
+24003,Cognettia sphagnetorum,enchytraeids,Cognettia,sphagnetorum,NA,24,1,1,NA,557,471,51,559
+24003,Cognettia,enchytraeids,Cognettia,,NA,24,1,1,NA,555,469,49,557
+24006,Fridericia alata,enchytraeids,Fridericia,alata,NA,24,1,1,NA,569,483,58,571
+24006,Fridericia asymmetricoides,enchytraeids,Fridericia,asymmetricoides,NA,24,0,0,NA,570,484,101,572
+24006,Fridericia aurita,enchytraeids,Fridericia,aurita,NA,24,0,0,NA,571,485,102,573
+24006,Fridericia baskini,enchytraeids,Fridericia,baskini,NA,24,0,0,NA,572,486,103,574
+24006,Fridericia benti,enchytraeids,Fridericia,benti,NA,24,1,1,NA,573,487,59,575
+24006,Fridericia berninii,enchytraeids,Fridericia,berninii,NA,24,0,0,NA,574,488,104,576
+24006,Fridericia bisetosa,enchytraeids,Fridericia,bisetosa,NA,24,1,1,NA,575,489,60,577
+24006,Fridericia bretscheri,enchytraeids,Fridericia,bretscheri,NA,24,1,1,NA,576,490,61,578
+24006,Fridericia bulboides,enchytraeids,Fridericia,bulboides,NA,24,1,1,NA,577,491,62,579
+24006,Fridericia bulbosa,enchytraeids,Fridericia,bulbosa,NA,24,1,0,NA,578,492,90,580
+24006,Fridericia callosa,enchytraeids,Fridericia,callosa,NA,24,0,0,NA,579,493,105,581
+24006,Fridericia christeri,enchytraeids,Fridericia,christeri,NA,24,0,0,NA,580,494,106,582
+24006,Fridericia christiani,enchytraeids,Fridericia,christiani,NA,24,0,0,NA,581,495,107,583
+24006,Fridericia connata,enchytraeids,Fridericia,connata,NA,24,0,0,NA,582,496,108,584
+24006,Fridericia cylindrica,enchytraeids,Fridericia,cylindrica,NA,24,0,0,NA,583,497,109,585
+24006,Fridericia deformis,enchytraeids,Fridericia,deformis,NA,24,0,0,NA,584,498,110,586
+24006,Fridericia dozsae,enchytraeids,Fridericia,dozsae,NA,24,0,0,NA,585,499,111,587
+24006,Fridericia galba,enchytraeids,Fridericia,galba,NA,24,1,1,NA,586,500,63,588
+24006,Fridericia glandifera,enchytraeids,Fridericia,glandifera,NA,24,0,0,NA,587,501,112,589
+24006,Fridericia globuligera,enchytraeids,Fridericia,globuligera,NA,24,0,0,NA,588,502,113,590
+24006,Fridericia gracilis,enchytraeids,Fridericia,gracilis,NA,24,0,0,NA,589,503,114,591
+24006,Fridericia granosa,enchytraeids,Fridericia,granosa,NA,24,0,0,NA,590,504,115,592
+24006,Fridericia hegemon,enchytraeids,Fridericia,hegemon,NA,24,0,0,NA,591,505,116,593
+24006,Fridericia isseli,enchytraeids,Fridericia,isseli,NA,24,0,0,NA,592,506,117,594
+24006,Fridericia lenta,enchytraeids,Fridericia,lenta,NA,24,0,0,NA,593,507,118,595
+24006,Fridericia maculata,enchytraeids,Fridericia,maculata,NA,24,1,1,NA,594,508,64,596
+24006,Fridericia magna,enchytraeids,Fridericia,magna,NA,24,0,0,NA,595,509,119,597
+24006,Fridericia minor,enchytraeids,Fridericia,minor,NA,24,1,1,NA,596,510,65,598
+24006,Fridericia parathalassia,enchytraeids,Fridericia,parathalassia,NA,24,1,1,NA,597,511,66,599
+24006,Fridericia paroniana,enchytraeids,Fridericia,paroniana,NA,24,1,1,NA,598,512,67,600
+24006,Fridericia perrieri,enchytraeids,Fridericia,perrieri,NA,24,1,1,NA,599,513,68,601
+24006,Fridericia ratzeli,enchytraeids,Fridericia,ratzeli,NA,24,1,1,NA,600,514,69,602
+24006,Fridericia semisetosa,enchytraeids,Fridericia,semisetosa,NA,24,0,0,NA,601,515,120,603
+24006,Fridericia simeani,enchytraeids,Fridericia,simeani,NA,24,0,0,NA,602,516,121,604
+24006,Fridericia singula,enchytraeids,Fridericia,singula,NA,24,0,0,NA,603,517,122,605
+24006,Fridericia ulrikae,enchytraeids,Fridericia,ulrikae,NA,24,0,0,NA,604,518,123,606
+24006,Fridericia viridula,enchytraeids,Fridericia,viridula,NA,24,0,0,NA,605,519,124,607
+24006,Fridericia waldenstroemi,enchytraeids,Fridericia,waldenstroemi,NA,24,0,0,NA,606,520,125,608
+24006,Fridericia,enchytraeids,Fridericia,,NA,24,1,1,NA,568,482,57,570
+24008,Hemifridericia parva,enchytraeids,Hemifridericia,parva,NA,24,0,0,NA,609,523,126,611
+24008,Hemifridericia,enchytraeids,Hemifridericia,,NA,24,1,0,NA,608,522,91,610
+31002,Acrobeles ciliatus,nematodes,Acrobeles,ciliatus,0.095087711,31,1,1,chris,64,4,610,66
+31002,Acrobeles complexus,nematodes,Acrobeles,complexus,0.095087711,31,1,0,chris,65,5,749,67
+31002,Acrobeles mariannae,nematodes,Acrobeles,mariannae,0.095087711,31,1,1,chris,66,6,611,68
+31002,Acrobeles,nematodes,Acrobeles,,0.095087711,31,1,1,chris,63,3,609,65
+31003,Acrobeloides buetschlii,nematodes,Acrobeloides,buetschlii,0.033690927,31,0,0,chris,68,8,946,70
+31003,Acrobeloides nanus,nematodes,Acrobeloides,nanus,0.033690927,31,1,1,chris,69,9,646,71
+31003,Acrobeloides,nematodes,Acrobeloides,,0.033690927,31,1,1,chris,67,7,645,69
+31004,Acrobelophis minimus,nematodes,Acrobelophis,minimus,NA,31,0,0,chris,71,11,790,73
+31004,Acrobelophis,nematodes,Acrobelophis,,NA,31,0,0,chris,70,10,789,72
+31005,Acrolobus emarginatus,nematodes,Acrolobus,emarginatus,NA,31,0,0,chris,73,13,792,75
+31005,Acrolobus,nematodes,Acrolobus,,NA,31,0,0,chris,72,12,791,74
+31007,Alaimidae,nematodes,Alaimidae,,0.09455,31,1,0,Ferris,76,16,676,78
+31008,Alaimus meyli,nematodes,Alaimus,meyli,0.069388043,31,1,0,chris,78,18,762,80
+31008,Alaimus mucronatus,nematodes,Alaimus,mucronatus,0.069388043,31,1,0,chris,79,19,763,81
+31008,Alaimus primitivus,nematodes,Alaimus,primitivus,0.069388043,31,1,0,chris,80,20,764,82
+31008,Alaimus,nematodes,Alaimus,,0.069388043,31,1,1,chris,77,17,628,79
+31010,Amphidelus elegans,nematodes,Amphidelus,elegans,0.06070625,31,1,0,Ferris,83,23,677,85
+31010,Amphidelus,nematodes,Amphidelus,,NA,31,0,0,chris,82,22,794,84
+31012,Anaplectus grandepapillatus,nematodes,Anaplectus,grandepapillatus,0.151254727,31,1,1,chris,88,28,584,90
+31012,Anaplectus granulosus,nematodes,Anaplectus,granulosus,0.151254727,31,1,1,chris,89,29,585,91
+31012,Anaplectus,nematodes,Anaplectus,,0.151254727,31,1,1,chris,87,27,583,89
+31023,Bastiania gracilis,nematodes,Bastiania,gracilis,0.056635646,31,0,0,chris,116,56,931,118
+31023,Bastiania Longicaudata,nematodes,Bastiania,Longicaudata,0.056635646,31,0,0,chris,117,57,932,119
+31023,Bastiania,nematodes,Bastiania,,0.056635646,31,1,1,chris,115,55,635,117
+31024,Bastianiidae,nematodes,Bastianiidae,,0.021725,31,1,0,Ferris,118,58,680,120
+31027,Bunonema reticulatum,nematodes,Bunonema,reticulatum,0.105442829,31,0,0,chris,124,64,922,126
+31027,Bunonema,nematodes,Bunonema,,0.105442829,31,1,1,chris,123,63,607,125
+31028,Bunonematidae,nematodes,Bunonematidae,,NA,31,0,0,chris,125,65,806,127
+31029,Bursilla monhystera,nematodes,Bursilla,monhystera,0.0752,31,1,0,Ferris,127,67,681,129
+31029,Bursilla,nematodes,Bursilla,,NA,31,0,0,chris,126,66,807,128
+31030,Butlerius micans,nematodes,Butlerius,micans,NA,31,0,0,chris,129,69,809,131
+31030,Butlerius,nematodes,Butlerius,,NA,31,0,0,chris,128,68,808,130
+31031,Cephalenchus hexalineatus,nematodes,Cephalenchus,hexalineatus,NA,31,0,0,chris,132,72,811,134
+31031,Cephalenchus,nematodes,Cephalenchus,,0.0156625,31,1,0,Ferris,131,71,682,133
+31032,Cephalobidae,nematodes,Cephalobidae,,0.044027263,31,1,1,chris,133,73,639,135
+31033,Cephalobus persegnis,nematodes,Cephalobus,persegnis,0.0335625,31,1,1,Ferris,135,75,541,137
+31033,Cephalobus,nematodes,Cephalobus,,0.0335625,31,1,0,Ferris,134,74,683,136
+31034,Cervidellus serratus,nematodes,Cervidellus,serratus,0.028500357,31,1,0,chris,137,77,778,139
+31034,Cervidellus vexilliger,nematodes,Cervidellus,vexilliger,0.028500357,31,1,1,chris,138,78,655,140
+31034,Cervidellus,nematodes,Cervidellus,,0.028500357,31,1,1,chris,136,76,654,138
+31035,Chiloplacus bisexualis,nematodes,Chiloplacus,bisexualis,NA,31,0,0,chris,140,80,812,142
+31035,Chiloplacus demani,nematodes,Chiloplacus,demani,0.074075,31,1,0,Ferris,141,81,685,143
+31035,Chiloplacus symmetricus,nematodes,Chiloplacus,symmetricus,0.09575,31,1,0,Ferris,142,82,686,144
+31035,Chiloplacus,nematodes,Chiloplacus,,0.0662,31,1,0,Ferris,139,79,684,141
+31036,Chromadorida,nematodes,Chromadorida,,0.018688513,31,1,0,chris,143,83,781,145
+31036,Chromadoridae,nematodes,Chromadoridae,,0.018688513,31,1,1,chris,144,84,667,146
+31037,Chronogaster,nematodes,Chronogaster,,0.044275,31,1,0,Ferris,145,85,687,147
+31039,Coarctadera,nematodes,Coarctadera,,NA,31,0,0,chris,148,88,813,150
+31043,Cruznema,nematodes,Cruznema,,NA,31,0,0,chris,155,95,816,157
+31044,Cuticularia oxycerca,nematodes,Cuticularia,oxycerca,0.14649375,31,1,0,Ferris,157,97,688,159
+31044,Cuticularia,nematodes,Cuticularia,,0.1464875,31,1,1,Ferris,156,96,542,158
+31045,Cylindrolaimus communis,nematodes,Cylindrolaimus,communis,NA,31,0,0,chris,159,99,817,161
+31045,Cylindrolaimus,nematodes,Cylindrolaimus,,0.0567625,31,1,0,Ferris,158,98,689,160
+31051,Diploscapter coronatus,nematodes,Diploscapter,coronatus,0.0195375,31,1,1,Ferris,169,109,543,171
+31051,Diploscapter,nematodes,Diploscapter,,0.036125,31,1,0,Ferris,168,108,691,170
+31055,Dolichorhabditis dolichura,nematodes,Dolichorhabditis,dolichura,0.20039375,31,1,0,Ferris,178,118,694,180
+31061,Drilocephalobus moldavicus,nematodes,Drilocephalobus,moldavicus,NA,31,0,0,chris,189,129,828,191
+31061,Drilocephalobus,nematodes,Drilocephalobus,,NA,31,0,0,chris,188,128,827,190
+31065,Eucephalobus mucronatus,nematodes,Eucephalobus,mucronatus,0.069741569,31,1,1,chris,199,139,625,201
+31065,Eucephalobus oxyuroides,nematodes,Eucephalobus,oxyuroides,0.069741569,31,1,1,chris,200,140,626,202
+31065,Eucephalobus paracornutus,nematodes,Eucephalobus,paracornutus,0.069741569,31,1,0,chris,201,141,761,203
+31065,Eucephalobus striatus,nematodes,Eucephalobus,striatus,0.069741569,31,1,1,chris,202,142,627,204
+31065,Eucephalobus,nematodes,Eucephalobus,,0.069741569,31,1,1,chris,198,138,624,200
+31067,Eumonhystera filiformis,nematodes,Eumonhystera,filiformis,0.121770181,31,0,0,chris,211,151,919,213
+31067,Eumonhystera similis,nematodes,Eumonhystera,similis,0.121770181,31,1,0,chris,212,152,744,214
+31067,Eumonhystera simplex,nematodes,Eumonhystera,simplex,0.121770181,31,1,0,chris,213,153,745,215
+31067,Eumonhystera vulgaris,nematodes,Eumonhystera,vulgaris,0.121770181,31,1,0,chris,214,154,746,216
+31067,Eumonhystera,nematodes,Eumonhystera,,0.121770181,31,1,1,chris,210,150,600,212
+31068,Euteratocephalus hirschmannae,nematodes,Euteratocephalus,hirschmannae,NA,31,0,0,chris,216,156,833,218
+31068,Euteratocephalus palustris,nematodes,Euteratocephalus,palustris,NA,31,0,0,chris,217,157,834,219
+31068,Euteratocephalus,nematodes,Euteratocephalus,,NA,31,0,0,chris,215,155,832,217
+31069,Fictor,nematodes,Fictor,,NA,31,0,0,chris,218,158,835,220
+31072,Geomonhystera villosa,nematodes,Geomonhystera,villosa,0.035573306,31,1,0,Ferris,232,172,698,234
+31076,Heterocephalobus elongatus,nematodes,Heterocephalobus,elongatus,0.041636956,31,1,0,Ferris,247,187,702,249
+31076,Heterocephalobus longicaudatus,nematodes,Heterocephalobus,longicaudatus,NA,31,0,0,chris,248,188,839,250
+31076,Heterocephalobus,nematodes,Heterocephalobus,,0.0444875,31,1,1,Ferris,246,186,548,248
+31094,Mesorhabditis ultima,nematodes,Mesorhabditis,ultima,0.091785583,31,1,0,Ferris,291,231,707,293
+31094,Mesorhabditis,nematodes,Mesorhabditis,,0.07095,31,1,1,Ferris,290,230,551,292
+31095,Metateratocephalus crassidens,nematodes,Metateratocephalus,crassidens,0.015601744,31,1,1,chris,293,233,673,295
+31095,Metateratocephalus,nematodes,Metateratocephalus,,0.015601744,31,1,1,chris,292,232,672,294
+31097,Microlaimidae,nematodes,Microlaimidae,,NA,31,0,0,chris,295,235,854,297
+31098,Microlaimus,nematodes,Microlaimus,,NA,31,0,0,chris,296,236,855,298
+31099,Monhystera,nematodes,Monhystera,,0.1481375,31,1,0,Ferris,297,237,708,299
+31100,Monhysteridae,nematodes,Monhysteridae,,0.125547755,31,1,1,chris,298,238,597,300
+31101,Monhystrella,nematodes,Monhystrella,,NA,31,0,0,chris,299,239,856,301
+31113,Odontolaimus,nematodes,Odontolaimus,,0.0197875,31,1,1,Ferris,319,259,553,321
+31114,Panagrobelus,nematodes,Panagrobelus,,0.0819,31,1,0,Ferris,320,260,711,322
+31115,Panagrolaimidae,nematodes,Panagrolaimidae,,0.0857625,31,1,0,Ferris,321,261,712,323
+31116,Panagrolaimus detritophagus,nematodes,Panagrolaimus,detritophagus,0.05675632,31,1,1,chris,323,263,633,325
+31116,Panagrolaimus paetzoldi,nematodes,Panagrolaimus,paetzoldi,0.05675632,31,1,0,chris,324,264,765,326
+31116,Panagrolaimus rigidus,nematodes,Panagrolaimus,rigidus,0.05675632,31,1,1,chris,325,265,634,327
+31116,Panagrolaimus subelongatus,nematodes,Panagrolaimus,subelongatus,0.05675632,31,1,0,chris,326,266,766,328
+31116,Panagrolaimus,nematodes,Panagrolaimus,,0.05675632,31,1,1,chris,322,262,632,324
+31117,Paramphidelus hortensis,nematodes,Paramphidelus,hortensis,0.044022025,31,0,0,chris,328,268,943,330
+31117,Paramphidelus,nematodes,Paramphidelus,,0.044022025,31,1,1,chris,327,267,640,329
+31118,Paraphanolaimus behningi,nematodes,Paraphanolaimus,behningi,NA,31,0,0,chris,330,270,865,332
+31118,Paraphanolaimus,nematodes,Paraphanolaimus,,NA,31,0,0,chris,329,269,864,331
+31123,Pareudiplogaster,nematodes,Pareudiplogaster,,0.0918375,31,1,0,Ferris,349,289,713,351
+31124,Pellioditis,nematodes,Pellioditis,,NA,31,0,0,chris,350,290,870,352
+31125,Pelodera,nematodes,Pelodera,,NA,31,0,0,chris,351,291,871,353
+31126,Plectidae,nematodes,Plectidae,,0.047891822,31,1,0,chris,352,292,767,354
+31127,Plectus acuminatus,nematodes,Plectus,acuminatus,0.130615083,31,1,1,chris,354,294,589,356
+31127,Plectus armatus,nematodes,Plectus,armatus,0.130615083,31,0,0,chris,355,295,916,357
+31127,Plectus cirratus,nematodes,Plectus,cirratus,0.130615083,31,1,1,chris,356,296,590,358
+31127,Plectus elongatus,nematodes,Plectus,elongatus,0.130615083,31,1,1,chris,357,297,591,359
+31127,Plectus longicaudatus,nematodes,Plectus,longicaudatus,0.130615083,31,1,1,chris,358,298,592,360
+31127,Plectus palustris,nematodes,Plectus,palustris,0.130615083,31,0,0,chris,359,299,917,361
+31127,Plectus parietinus,nematodes,Plectus,parietinus,0.130615083,31,1,1,chris,360,300,593,362
+31127,Plectus parvus,nematodes,Plectus,parvus,0.130615083,31,1,1,chris,361,301,594,363
+31127,Plectus pusillus,nematodes,Plectus,pusillus,0.130615083,31,0,0,chris,362,302,918,364
+31127,Plectus rhizophilus,nematodes,Plectus,rhizophilus,0.130615083,31,1,1,chris,363,303,595,365
+31127,Plectus subelongatus,nematodes,Plectus,subelongatus,0.130615083,31,1,1,chris,364,304,596,366
+31127,Plectus tenuis,nematodes,Plectus,tenuis,0.130615083,31,1,0,chris,365,305,743,367
+31127,Plectus,nematodes,Plectus,,0.130615083,31,1,1,chris,353,293,588,355
+31131,Prismatolaimus dolichurus,nematodes,Prismatolaimus,dolichurus,0.026222221,31,1,1,chris,380,320,657,382
+31131,Prismatolaimus intermedius,nematodes,Prismatolaimus,intermedius,0.026222221,31,1,1,chris,381,321,658,383
+31131,Prismatolaimus,nematodes,Prismatolaimus,,0.026222221,31,1,1,chris,379,319,656,381
+31132,Pristionchus lheritieri,nematodes,Pristionchus,lheritieri,0.718221643,31,1,0,Ferris,383,323,715,385
+31132,Pristionchus,nematodes,Pristionchus,,NA,31,0,0,chris,382,322,873,384
+31133,Prodesmodora,nematodes,Prodesmodora,,0.032325,31,1,0,Ferris,384,324,716,386
+31135,Protorhabditis filiformis,nematodes,Protorhabditis,filiformis,0.016022695,31,1,0,Ferris,392,332,717,394
+31135,Protorhabditis oxyuroides,nematodes,Protorhabditis,oxyuroides,0.084188236,31,1,0,Ferris,393,333,718,395
+31135,Protorhabditis,nematodes,Protorhabditis,,NA,31,0,0,chris,391,331,874,393
+31142,Rhabditidae,nematodes,Rhabditidae,,0.101725923,31,1,1,chris,406,346,608,408
+31143,Rhabditis longicaudata,nematodes,Rhabditis,longicaudata,0.091487196,31,1,0,chris,408,348,751,410
+31143,Rhabditis terricola,nematodes,Rhabditis,terricola,0.091487196,31,1,0,chris,409,349,752,411
+31143,Rhabditis,nematodes,Rhabditis,,0.091487196,31,1,0,chris,407,347,750,409
+31148,Teratocephalidae,nematodes,Teratocephalidae,,0.0160125,31,1,0,Ferris,424,364,719,426
+31149,Teratocephalus costatus,nematodes,Teratocephalus,costatus,0.011719739,31,1,0,chris,426,366,786,428
+31149,Teratocephalus tenuis,nematodes,Teratocephalus,tenuis,0.011719739,31,1,0,chris,427,367,787,429
+31149,Teratocephalus terrestris,nematodes,Teratocephalus,terrestris,0.011719739,31,1,1,chris,428,368,675,430
+31149,Teratocephalus,nematodes,Teratocephalus,,0.011719739,31,1,1,chris,425,365,674,427
+31165,Tylocephalus auriculatus,nematodes,Tylocephalus,auriculatus,NA,31,0,0,chris,467,407,890,469
+31165,Tylocephalus,nematodes,Tylocephalus,,NA,31,0,0,chris,466,406,889,468
+31167,Tylopharynx foetida,nematodes,Tylopharynx,foetida,0.017997133,31,1,0,chris,472,412,783,474
+31167,Tylopharynx,nematodes,Tylopharynx,,0.017997133,31,1,0,chris,471,411,782,473
+31168,Wilsonema otophorum,nematodes,Wilsonema,otophorum,0.136996902,31,1,1,chris,474,414,587,476
+31168,Wilsonema schuurmansstekhoveni,nematodes,Wilsonema,schuurmansstekhoveni,0.136996902,31,0,0,chris,475,415,915,477
+31168,Wilsonema,nematodes,Wilsonema,,0.136996902,31,1,1,chris,473,413,586,475
+32045,Eupelops bilobus,micro-arthropods,Eupelops,bilobus,1.05921914,32,0,0,chris,858,646,499,860
+32045,Eupelops fuligineus,micro-arthropods,Eupelops,fuligineus,1.05921914,32,0,0,chris,859,647,500,861
+32045,Eupelops nepotulus,micro-arthropods,Eupelops,nepotulus,1.05921914,32,0,0,chris,860,648,501,862
+32045,Eupelops occultus,micro-arthropods,Eupelops,occultus,1.05921914,32,1,0,chris,861,649,351,863
+32045,Eupelops plicatus,micro-arthropods,Eupelops,plicatus,1.05921914,32,1,0,chris,862,650,352,864
+32045,Eupelops tardus,micro-arthropods,Eupelops,tardus,1.05921914,32,1,1,chris,863,651,193,865
+32045,Eupelops torulosus,micro-arthropods,Eupelops,torulosus,1.05921914,32,0,0,chris,864,652,502,866
+32045,Eupelops,micro-arthropods,Eupelops,,1.05921914,32,1,0,chris,857,645,350,859
+32055,Histiostoma,micro-arthropods,Histiostoma,,0.078253038,32,1,1,chris,891,679,257,893
+34004,Enchytraeus albidus,enchytraeids,Enchytraeus,albidus,NA,34,1,1,NA,559,473,53,561
+34004,Enchytraeus buchholzi,enchytraeids,Enchytraeus,buchholzi,NA,34,1,1,NA,560,474,54,562
+34004,Enchytraeus bulbosus,enchytraeids,Enchytraeus,bulbosus,NA,34,0,0,NA,561,475,98,563
+34004,Enchytraeus christenseni,enchytraeids,Enchytraeus,christenseni,NA,34,1,1,NA,562,476,55,564
+34004,Enchytraeus coronatus,enchytraeids,Enchytraeus,coronatus,NA,34,0,0,NA,563,477,99,565
+34004,Enchytraeus lacteus,enchytraeids,Enchytraeus,lacteus,NA,34,0,0,NA,564,478,100,566
+34004,Enchytraeus minutus,enchytraeids,Enchytraeus,minutus,NA,34,1,0,NA,565,479,88,567
+34004,Enchytraeus,enchytraeids,Enchytraeus,,NA,34,1,1,NA,558,472,52,560
+34005,Enchytronia parva,enchytraeids,Enchytronia,parva,NA,34,1,1,NA,567,481,56,569
+34005,Enchytronia,enchytraeids,Enchytronia,,NA,34,1,0,NA,566,480,89,568
+34007,Hemienchytraeus,enchytraeids,Hemienchytraeus,,NA,34,1,1,NA,607,521,70,609
+34011,Mesenchytraeus,enchytraeids,Mesenchytraeus,,NA,34,1,0,NA,631,545,95,633
+40000,Bacteria,bacteria,Bacteria,,NA,40,1,1,NA,1183,959,1,1185
+41046,Dauerlarve,nematodes,Dauerlarve,,0.07845252,41,1,1,chris,478,418,618,480
+44000,Juvenile non-tanylobous,earthworms,Juvenile,non-tanylobous,NA,44,1,1,NA,527,453,9,529
+44000,Juvenile tanylobous,earthworms,Juvenile,tanylobous,NA,44,1,1,NA,526,452,10,528
+44000,Unknown earthworm,earthworms,Unknown,earthworm,NA,44,1,1,NA,528,454,15,530
+44000,Unknown enchytraeid,enchytraeids,Unknown,enchytraeid,NA,44,1,1,NA,632,546,86,634
+44002,Buchholzia appendiculata,enchytraeids,Buchholzia,appendiculata,NA,44,1,1,NA,552,466,46,554
+44002,Buchholzia fallax,enchytraeids,Buchholzia,fallax,NA,44,1,1,NA,553,467,47,555
+44002,Buchholzia,enchytraeids,Buchholzia,,NA,44,1,1,NA,551,465,45,553
+44009,Henlea balcanica,enchytraeids,Henlea,balcanica,NA,44,1,0,NA,611,525,92,613
+44009,Henlea heleotropha,enchytraeids,Henlea,heleotropha,NA,44,1,0,NA,612,526,93,614
+44009,Henlea nasuta,enchytraeids,Henlea,nasuta,NA,44,1,0,NA,613,527,94,615
+44009,Henlea perpusilla,enchytraeids,Henlea,perpusilla,NA,44,1,1,NA,614,528,72,616
+44009,Henlea ventriculosa,enchytraeids,Henlea,ventriculosa,NA,44,1,1,NA,615,529,73,617
+44009,Henlea,enchytraeids,Henlea,,NA,44,1,1,NA,610,524,71,612
+44010,Marionina appendiculata,enchytraeids,Marionina,appendiculata,NA,44,0,0,NA,618,532,127,620
+44010,Marionina argentea,enchytraeids,Marionina,argentea,NA,44,1,1,NA,619,533,76,621
+44010,Marionina clavata,enchytraeids,Marionina,clavata,NA,44,1,1,NA,620,534,77,622
+44010,Marionina communis,enchytraeids,Marionina,communis,NA,44,1,1,NA,621,535,78,623
+44010,Marionina diverticulata,enchytraeids,Marionina,diverticulata,NA,44,0,0,NA,622,536,128,624
+44010,Marionina filiformis,enchytraeids,Marionina,filiformis,NA,44,1,1,NA,623,537,79,625
+44010,Marionina libra,enchytraeids,Marionina,libra,NA,44,1,1,NA,624,538,80,626
+44010,Marionina praeclitellochaeta,enchytraeids,Marionina,praeclitellochaeta,NA,44,0,0,NA,625,539,129,627
+44010,Marionina riparia,enchytraeids,Marionina,riparia,NA,44,1,1,NA,626,540,81,628
+44010,Marionina simillima,enchytraeids,Marionina,simillima,NA,44,1,1,NA,627,541,82,629
+44010,Marionina spicula,enchytraeids,Marionina,spicula,NA,44,1,1,NA,628,542,83,630
+44010,Marionina subterranea,enchytraeids,Marionina,subterranea,NA,44,1,1,NA,629,543,84,631
+44010,Marionina vesiculata,enchytraeids,Marionina,vesiculata,NA,44,1,1,NA,630,544,85,632
+44010,Marionina,enchytraeids,Marionina,,NA,44,1,1,NA,617,531,75,619
+45012,Allolobophora antipae,earthworms,Allolobophora,antipae,NA,45,0,0,NA,494,420,19,496
+45012,Allolobophora chlorotica,earthworms,Allolobophora,chlorotica,NA,45,1,1,NA,495,421,2,497
+45012,Allolobophora cupulifera,earthworms,Allolobophora,cupulifera,NA,45,0,0,NA,496,422,20,498
+45012,Allolobophora,earthworms,Allolobophora,,NA,45,0,0,NA,493,419,18,495
+45013,Aporrectodea antipae,earthworms,Aporrectodea,antipae,NA,45,0,0,NA,498,424,22,500
+45013,Aporrectodea caliginosa,earthworms,Aporrectodea,caliginosa,NA,45,1,1,NA,499,425,3,501
+45013,Aporrectodea cupulifera,earthworms,Aporrectodea,cupulifera,NA,45,0,0,NA,500,426,23,502
+45013,Aporrectodea limicola,earthworms,Aporrectodea,limicola,NA,45,1,1,NA,501,427,4,503
+45013,Aporrectodea longa,earthworms,Aporrectodea,longa,NA,45,1,1,NA,502,428,5,504
+45013,Aporrectodea rosea,earthworms,Aporrectodea,rosea,NA,45,1,1,NA,503,429,6,505
+45013,Aporrectodea,earthworms,Aporrectodea,,NA,45,0,0,NA,497,423,21,499
+45014,Dendrobaena hortensis,earthworms,Dendrobaena,hortensis,NA,45,0,0,NA,505,431,25,507
+45014,Dendrobaena octaedra,earthworms,Dendrobaena,octaedra,NA,45,1,1,NA,506,432,7,508
+45014,Dendrobaena rubida,earthworms,Dendrobaena,rubida,NA,45,1,0,NA,507,433,16,509
+45014,Dendrobaena subrubicunda,earthworms,Dendrobaena,subrubicunda,NA,45,0,0,NA,508,434,26,510
+45014,Dendrobaena tenuis,earthworms,Dendrobaena,tenuis,NA,45,0,0,NA,509,435,27,511
+45014,Dendrobaena,earthworms,Dendrobaena,,NA,45,0,0,NA,504,430,24,506
+45016,Eisenia andrei,earthworms,Eisenia,andrei,NA,45,0,0,NA,510,436,28,512
+45016,Eisenia fetida,earthworms,Eisenia,fetida,NA,45,0,0,NA,511,437,29,513
+45017,Eiseniella tetraedra,earthworms,Eiseniella,tetraedra,NA,45,1,1,NA,512,438,8,514
+45018,Lumbricus castaneus,earthworms,Lumbricus,castaneus,NA,45,1,0,NA,514,440,17,516
+45018,Lumbricus eiseni,earthworms,Lumbricus,eiseni,NA,45,0,0,NA,515,441,30,517
+45018,Lumbricus festivus,earthworms,Lumbricus,festivus,NA,45,0,0,NA,516,442,31,518
+45018,Lumbricus friendi,earthworms,Lumbricus,friendi,0,45,0,0,NA,517,443,32,519
+45018,Lumbricus rubellus,earthworms,Lumbricus,rubellus,NA,45,1,1,NA,518,444,12,520
+45018,Lumbricus terrestris,earthworms,Lumbricus,terrestris,NA,45,1,1,NA,519,445,13,521
+45018,Lumbricus,earthworms,Lumbricus,,NA,45,1,1,NA,513,439,11,515
+45019,Octolasion cyaneum,earthworms,Octolasion,cyaneum,NA,45,0,0,NA,522,448,35,524
+45019,Octolasion lacteum,earthworms,Octolasion,lacteum,NA,45,0,0,NA,523,449,36,525
+45019,Octolasion tyrtaeum,earthworms,Octolasion,tyrtaeum,NA,45,1,1,NA,524,450,14,526
+45019,Octolasion,earthworms,Octolasion,,NA,45,0,0,NA,521,447,34,523
+45020,Satchellius mammelis,earthworms,Satchellius,mammelis,NA,45,0,0,NA,525,451,37,527
+51013,Anatonchus tridentatus,nematodes,Anatonchus,tridentatus,1.273629397,51,1,1,chris,91,31,561,93
+51013,Anatonchus,nematodes,Anatonchus,,1.273629397,51,0,0,chris,90,30,892,92
+51038,Clarkus papillatus,nematodes,Clarkus,papillatus,0.245096069,51,1,0,chris,147,87,742,149
+51038,Clarkus,nematodes,Clarkus,,0.245096069,51,1,1,chris,146,86,575,148
+51040,Coomansus parvus,nematodes,Coomansus,parvus,NA,51,0,0,chris,150,90,815,152
+51040,Coomansus,nematodes,Coomansus,,NA,51,0,0,chris,149,89,814,151
+51052,Discolaimus,nematodes,Discolaimus,,NA,51,0,0,chris,170,110,821,172
+51102,Mononchidae,nematodes,Mononchidae,,0.074480666,51,1,1,chris,300,240,622,302
+51103,Mononchoides,nematodes,Mononchoides,,NA,51,0,0,chris,301,241,857,303
+51104,Mononchus aquaticus,nematodes,Mononchus,aquaticus,0.057610829,51,0,0,chris,303,243,929,305
+51104,Mononchus truncatus,nematodes,Mononchus,truncatus,0.057610829,51,0,0,chris,304,244,930,306
+51104,Mononchus,nematodes,Mononchus,,0.057610829,51,1,1,chris,302,242,631,304
+51106,Mylonchulus brachyuris,nematodes,Mylonchulus,brachyuris,0.494192891,51,0,0,chris,306,246,902,308
+51106,Mylonchulus sigmaturus,nematodes,Mylonchulus,sigmaturus,0.494192891,51,1,0,chris,307,247,734,309
+51106,Mylonchulus subtenuis,nematodes,Mylonchulus,subtenuis,0.494192891,51,1,0,chris,308,248,735,310
+51106,Mylonchulus,nematodes,Mylonchulus,,0.494192891,51,1,1,chris,305,245,568,307
+51130,Prionchulus punctatus,nematodes,Prionchulus,punctatus,0.515499896,51,1,1,chris,378,318,567,380
+51130,Prionchulus,nematodes,Prionchulus,,0.515499896,51,0,0,chris,377,317,901,379
+51146,Seinura demani,nematodes,Seinura,demani,0.076814438,51,1,1,chris,421,361,619,423
+51146,Seinura tenuicaudata,nematodes,Seinura,tenuicaudata,0.076814438,51,0,0,chris,422,362,926,424
+51146,Seinura,nematodes,Seinura,,0.076814438,51,1,0,chris,420,360,756,422
+51150,Thonus circulifer,nematodes,Thonus,circulifer,0.686379015,51,1,0,chris,431,371,731,433
+51150,Thonus laticollis,nematodes,Thonus,laticollis,0.686379015,51,0,0,chris,432,372,897,434
+51150,Thonus minutus,nematodes,Thonus,minutus,0.686379015,51,0,0,chris,433,373,898,435
+51150,Thonus productus,nematodes,Thonus,productus,0.686379015,51,1,0,chris,434,374,732,436
+51150,Thonus rhopalocercus,nematodes,Thonus,rhopalocercus,0.686379015,51,0,0,chris,435,375,899,437
+51150,Thonus,nematodes,Thonus,,0.686379015,51,1,1,chris,430,370,566,432
+51156,Tripyla affinis,nematodes,Tripyla,affinis,0.190013528,51,0,0,chris,444,384,912,446
+51156,Tripyla cornuta,nematodes,Tripyla,cornuta,0.190013528,51,1,1,chris,445,385,581,447
+51156,Tripyla filicaudata,nematodes,Tripyla,filicaudata,0.190013528,51,0,0,chris,446,386,913,448
+51156,Tripyla setifera,nematodes,Tripyla,setifera,0.190013528,51,0,0,chris,447,387,914,449
+51156,Tripyla,nematodes,Tripyla,,0.190013528,51,1,1,chris,443,383,580,445
+51157,Tripylidae,nematodes,Tripylidae,,0.3152875,51,1,0,Ferris,448,388,721,450
+51158,Trischistoma monohystera,nematodes,Trischistoma,monohystera,NA,51,0,0,chris,449,389,886,451
+52004,Alliphis sculpturatus,micro-arthropods,Alliphis,sculpturatus,0.565446176,52,1,0,chris,763,551,373,765
+52004,Alliphis siculus,micro-arthropods,Alliphis,siculus,0.565446176,52,1,1,chris,764,552,210,766
+62005,Amblyseius meridionalis,micro-arthropods,Amblyseius,meridionalis,0.455633089,62,1,0,chris,767,555,387,769
+62005,Amblyseius obtusus,micro-arthropods,Amblyseius,obtusus,0.455633089,62,0,0,chris,768,556,513,770
+62005,Amblyseius,micro-arthropods,Amblyseius,,0.455633089,62,1,0,chris,766,554,386,768
+62014,Bdella,micro-arthropods,Bdella,,3.26941465,62,1,1,chris,786,574,161,788
+62018,Blattisocius keegani,micro-arthropods,Blattisocius,keegani,0.967535022,62,1,0,chris,790,578,355,792
+62052,Geholaspis longispinosus,micro-arthropods,Geholaspis,longispinosus,2.292181714,62,0,0,chris,883,671,484,885
+62052,Geholaspis mandibularis,micro-arthropods,Geholaspis,mandibularis,2.292181714,62,1,0,chris,884,672,312,886
+62103,Phytoseiidae,micro-arthropods,Phytoseiidae,,0.455633089,62,1,0,chris,1042,830,388,1044
+72006,Anystidae,micro-arthropods,Anystidae,,2.075359708,72,1,0,chris,773,561,315,775
+72007,Arctoseius cetratus,micro-arthropods,Arctoseius,cetratus,0.35247536,72,1,1,chris,774,562,228,776
+72007,Arctoseius insularis,micro-arthropods,Arctoseius,insularis,0.35247536,72,0,0,chris,775,563,514,777
+72007,Arctoseius minutus,micro-arthropods,Arctoseius,minutus,0.35247536,72,1,1,chris,776,564,229,778
+72008,Asca aphidioides,micro-arthropods,Asca,aphidioides,0.390993004,72,1,0,chris,779,567,390,781
+72008,Asca bicornis,micro-arthropods,Asca,bicornis,0.390993004,72,1,1,chris,780,568,224,782
+72026,Cheiroseius borealis,micro-arthropods,Cheiroseius,borealis,1.135608693,72,1,1,chris,810,598,189,812
+72026,Cheiroseius necorniger,micro-arthropods,Cheiroseius,necorniger,1.135608693,72,1,0,chris,811,599,345,813
+72026,Cheiroseius serratus,micro-arthropods,Cheiroseius,serratus,1.135608693,72,1,0,chris,812,600,346,814
+72026,Cheiroseius,micro-arthropods,Cheiroseius,,1.135608693,72,1,1,chris,809,597,188,811
+72030,Cyrtolaelaps mucronatus,micro-arthropods,Cyrtolaelaps,mucronatus,3.788258649,72,1,0,chris,821,609,295,823
+72034,Dendrolaelaps foveolatus,micro-arthropods,Dendrolaelaps,foveolatus,0.531896197,72,1,0,chris,826,614,375,828
+72034,Dendrolaelaps latior,micro-arthropods,Dendrolaelaps,latior,0.531896197,72,1,0,chris,827,615,376,829
+72034,Dendrolaelaps rectus,micro-arthropods,Dendrolaelaps,rectus,0.531896197,72,1,1,chris,828,616,213,830
+72034,Dendrolaelaps samsinaki,micro-arthropods,Dendrolaelaps,samsinaki,0.531896197,72,1,1,chris,829,617,214,831
+72034,Dendrolaelaps strenzkei,micro-arthropods,Dendrolaelaps,strenzkei,0.531896197,72,1,0,chris,830,618,377,832
+72034,Dendrolaelaps,micro-arthropods,Dendrolaelaps,,0.531896197,72,1,1,chris,825,613,212,827
+72035,Dendroseius reticulatus,micro-arthropods,Dendroseius,reticulatus,0.244622706,72,1,1,chris,831,619,234,833
+72050,Gamasodes spiniger,micro-arthropods,Gamasodes,spiniger,1.003701467,72,1,0,chris,881,669,353,883
+72050,Gamasodes,micro-arthropods,Gamasodes,,1.003701467,72,0,0,chris,880,668,503,882
+72051,Gamasolaelaps excisus,micro-arthropods,Gamasolaelaps,excisus,2.549232014,72,1,0,chris,882,670,309,884
+72056,Holoparasitus calcaratus,micro-arthropods,Holoparasitus,calcaratus,1.512937513,72,1,0,chris,893,681,326,895
+72056,Holoparasitus,micro-arthropods,Holoparasitus,,1.512937513,72,1,0,chris,892,680,325,894
+72058,Hypoaspis aculeifer,micro-arthropods,Hypoaspis,aculeifer,1.078062151,72,1,0,chris,896,684,347,898
+72058,Hypoaspis angusta,micro-arthropods,Hypoaspis,angusta,1.078062151,72,1,0,chris,897,685,348,899
+72058,Hypoaspis angustiscutata,micro-arthropods,Hypoaspis,angustiscutata,1.078062151,72,0,0,chris,898,686,496,900
+72058,Hypoaspis claviger,micro-arthropods,Hypoaspis,claviger,1.078062151,72,1,0,chris,899,687,349,901
+72058,Hypoaspis miles,micro-arthropods,Hypoaspis,miles,1.078062151,72,0,0,chris,900,688,497,902
+72058,Hypoaspis praesternalis,micro-arthropods,Hypoaspis,praesternalis,1.078062151,72,1,1,chris,901,689,192,903
+72058,Hypoaspis vacua,micro-arthropods,Hypoaspis,vacua,1.078062151,72,0,0,chris,902,690,498,904
+72058,Hypoaspis,micro-arthropods,Hypoaspis,,1.078062151,72,1,1,chris,895,683,191,897
+72063,Labidostomma luteum,micro-arthropods,Labidostomma,luteum,1.359658717,72,1,0,chris,917,705,330,919
+72064,Lasioseius berlesei,micro-arthropods,Lasioseius,berlesei,0.650232052,72,1,0,chris,919,707,367,921
+72064,Lasioseius paucisetosus,micro-arthropods,Lasioseius,paucisetosus,0.650232052,72,1,0,chris,920,708,368,922
+72064,Lasioseius,micro-arthropods,Lasioseius,,0.650232052,72,1,1,chris,918,706,206,920
+72067,Leioseius bicolor,micro-arthropods,Leioseius,bicolor,0.396661538,72,1,1,chris,925,713,223,927
+72067,Leioseius,micro-arthropods,Leioseius,,0.396661538,72,1,0,chris,924,712,389,926
+72071,Lysigamasus misellus,micro-arthropods,Lysigamasus,misellus,1.275812642,72,1,0,chris,946,734,333,948
+72071,Lysigamasus runcatellus,micro-arthropods,Lysigamasus,runcatellus,1.275812642,72,1,1,chris,947,735,184,949
+72071,Lysigamasus runciger,micro-arthropods,Lysigamasus,runciger,1.275812642,72,1,1,chris,948,736,185,950
+72071,Lysigamasus truncus,micro-arthropods,Lysigamasus,truncus,1.275812642,72,1,0,chris,949,737,334,951
+72071,Lysigamasus vagabundus,micro-arthropods,Lysigamasus,vagabundus,1.275812642,72,1,1,chris,950,738,186,952
+72071,Lysigamasus,micro-arthropods,Lysigamasus,,1.275812642,72,1,1,chris,945,733,183,947
+72072,Macrocheles carinatus,micro-arthropods,Macrocheles,carinatus,2.882302137,72,1,1,chris,952,740,165,954
+72072,Macrocheles glaber,micro-arthropods,Macrocheles,glaber,2.882302137,72,1,0,chris,953,741,302,955
+72072,Macrocheles mammifer,micro-arthropods,Macrocheles,mammifer,2.882302137,72,0,0,chris,954,742,482,956
+72072,Macrocheles muscadomesticae,micro-arthropods,Macrocheles,muscadomesticae,2.882302137,72,1,0,chris,955,743,303,957
+72072,Macrocheles penicilliger,micro-arthropods,Macrocheles,penicilliger,2.882302137,72,1,0,chris,956,744,304,958
+72072,Macrocheles,micro-arthropods,Macrocheles,,2.882302137,72,1,1,chris,951,739,164,953
+72084,Neojordensia laevis,micro-arthropods,Neojordensia,laevis,1.176,72,1,1,didden94,978,766,135,980
+72084,Neojordensia sinuata,micro-arthropods,Neojordensia,sinuata,1.176,72,1,0,didden94,979,767,268,981
+72093,Pachylaelaps hispani,micro-arthropods,Pachylaelaps,hispani,1.184728176,72,1,1,chris,999,787,187,1001
+72093,Pachylaelaps imitans,micro-arthropods,Pachylaelaps,imitans,1.184728176,72,0,0,chris,1000,788,492,1002
+72093,Pachylaelaps karawaiewi,micro-arthropods,Pachylaelaps,karawaiewi,1.184728176,72,1,0,chris,1001,789,337,1003
+72093,Pachylaelaps laeuchlii,micro-arthropods,Pachylaelaps,laeuchlii,1.184728176,72,0,0,chris,1002,790,493,1004
+72093,Pachylaelaps longisetis,micro-arthropods,Pachylaelaps,longisetis,1.184728176,72,1,0,chris,1003,791,338,1005
+72093,Pachylaelaps magnus,micro-arthropods,Pachylaelaps,magnus,1.184728176,72,0,0,chris,1004,792,494,1006
+72093,Pachylaelaps multidentatus,micro-arthropods,Pachylaelaps,multidentatus,1.184728176,72,1,0,chris,1005,793,339,1007
+72093,Pachylaelaps pectinifer,micro-arthropods,Pachylaelaps,pectinifer,1.184728176,72,0,0,chris,1006,794,495,1008
+72093,Pachylaelaps tesselatus,micro-arthropods,Pachylaelaps,tesselatus,1.184728176,72,1,0,chris,1007,795,340,1009
+72093,Pachylaelaps vexillifer,micro-arthropods,Pachylaelaps,vexillifer,1.184728176,72,1,0,chris,1008,796,341,1010
+72093,Pachylaelaps,micro-arthropods,Pachylaelaps,,1.184728176,72,1,0,chris,998,786,336,1000
+72094,Pachyseius humeralis,micro-arthropods,Pachyseius,humeralis,1.275812642,72,1,0,chris,1009,797,335,1011
+72096,Parasitus beta,micro-arthropods,Parasitus,beta,3.610989701,72,1,0,chris,1014,802,296,1016
+72096,Parasitus coleoptratorum,micro-arthropods,Parasitus,coleoptratorum,3.610989701,72,1,1,chris,1015,803,159,1017
+72096,Parasitus consanguineus,micro-arthropods,Parasitus,consanguineus,3.610989701,72,1,1,chris,1016,804,160,1018
+72096,Parasitus hyalinus,micro-arthropods,Parasitus,hyalinus,3.610989701,72,1,0,chris,1017,805,297,1019
+72096,Parasitus lunulatus,micro-arthropods,Parasitus,lunulatus,3.610989701,72,1,0,chris,1018,806,298,1020
+72096,Parasitus,micro-arthropods,Parasitus,,3.610989701,72,1,1,chris,1013,801,158,1015
+72097,Parazercon radiatus,micro-arthropods,Parazercon,radiatus,0.363272995,72,1,1,chris,1020,808,227,1022
+72100,Pergamasus conus,micro-arthropods,Pergamasus,conus,6.024496975,72,1,0,chris,1029,817,283,1031
+72100,Pergamasus crassipes,micro-arthropods,Pergamasus,crassipes,6.024496975,72,1,1,chris,1030,818,150,1032
+72100,Pergamasus norvegicus,micro-arthropods,Pergamasus,norvegicus,6.024496975,72,1,1,chris,1031,819,151,1033
+72100,Pergamasus parrunciger,micro-arthropods,Pergamasus,parrunciger,6.024496975,72,0,0,chris,1032,820,476,1034
+72100,Pergamasus quisquiliarum,micro-arthropods,Pergamasus,quisquiliarum,6.024496975,72,1,0,chris,1033,821,284,1035
+72100,Pergamasus ruehmi,micro-arthropods,Pergamasus,ruehmi,6.024496975,72,1,0,chris,1034,822,285,1036
+72100,Pergamasus septentrionalis,micro-arthropods,Pergamasus,septentrionalis,6.024496975,72,1,0,chris,1035,823,286,1037
+72100,Pergamasus,micro-arthropods,Pergamasus,,6.024496975,72,1,1,chris,1028,816,149,1030
+72107,Prozercon kochi,micro-arthropods,Prozercon,kochi,0.35247536,72,1,0,chris,1055,843,391,1057
+72115,Rhagidia,micro-arthropods,Rhagidia,,0.796823644,72,1,1,chris,1077,865,201,1079
+72118,Rhodacarellus perspicuus,micro-arthropods,Rhodacarellus,perspicuus,0.244622706,72,1,0,chris,1081,869,397,1083
+72118,Rhodacarellus silesiacus,micro-arthropods,Rhodacarellus,silesiacus,0.244622706,72,1,1,chris,1082,870,235,1084
+72118,Rhodacarellus,micro-arthropods,Rhodacarellus,,0.244622706,72,1,0,chris,1080,868,396,1082
+72119,Rhodacaridae,micro-arthropods,Rhodacaridae,,0.244622706,72,1,0,chris,1083,871,398,1085
+72120,Rhodacarus clavulatus,micro-arthropods,Rhodacarus,clavulatus,0.505807877,72,1,0,chris,1085,873,383,1087
+72120,Rhodacarus coronatus,micro-arthropods,Rhodacarus,coronatus,0.505807877,72,1,1,chris,1086,874,218,1088
+72120,Rhodacarus,micro-arthropods,Rhodacarus,,0.505807877,72,1,0,chris,1084,872,382,1086
+72141,Uroobovella marginata,micro-arthropods,Uroobovella,marginata,3.969853555,72,0,0,chris,1149,937,480,1151
+72141,Uroobovella vinicolora,micro-arthropods,Uroobovella,vinicolora,3.969853555,72,0,0,chris,1150,938,481,1152
+72141,Uroobovella,micro-arthropods,Uroobovella,,3.969853555,72,1,0,chris,1148,936,294,1150
+72142,Uropoda minima,micro-arthropods,Uropoda,minima,1.512937513,72,1,1,chris,1152,940,176,1154
+72142,Uropoda orbicularis,micro-arthropods,Uropoda,orbicularis,1.512937513,72,1,1,chris,1153,941,177,1155
+72142,Uropoda,micro-arthropods,Uropoda,,1.512937513,72,1,1,chris,1151,939,175,1153
+72143,Uroseius cylindricus,micro-arthropods,Uroseius,cylindricus,1.359658717,72,1,0,chris,1155,943,332,1157
+72144,Veigaia cerva,micro-arthropods,Veigaia,cerva,2.049027255,72,1,0,chris,1157,945,317,1159
+72144,Veigaia exigua,micro-arthropods,Veigaia,exigua,2.049027255,72,0,0,chris,1158,946,487,1160
+72144,Veigaia nemorensis,micro-arthropods,Veigaia,nemorensis,2.049027255,72,1,1,chris,1159,947,171,1161
+72144,Veigaia,micro-arthropods,Veigaia,,2.049027255,72,1,0,chris,1156,944,316,1158
+72145,Zercon colligans,micro-arthropods,Zercon,colligans,0.558652613,72,1,0,chris,1166,954,374,1168
+72145,Zercon triangularis,micro-arthropods,Zercon,triangularis,0.558652613,72,1,1,chris,1167,955,211,1169
+72145,Zercon,micro-arthropods,Zercon,,0.558652613,72,0,0,chris,1165,953,509,1167
+72146,Zercoseius spathuliger,micro-arthropods,Zercoseius,spathuliger,0.579158718,72,1,0,chris,1168,956,370,1170
+81009,Allodorylaimus andrassyi,nematodes,Allodorylaimus,andrassyi,NA,81,0,0,chris,81,21,793,83
+81019,Aporcelaimellus obtusicaudatus,nematodes,Aporcelaimellus,obtusicaudatus,1.767627066,81,1,1,chris,107,47,560,109
+81019,Aporcelaimellus paraobtusicaudatus,nematodes,Aporcelaimellus,paraobtusicaudatus,1.767627066,81,1,0,chris,108,48,729,110
+81019,Aporcelaimellus simplex,nematodes,Aporcelaimellus,simplex,1.767627066,81,1,0,chris,109,49,730,111
+81019,Aporcelaimellus,nematodes,Aporcelaimellus,,1.767627066,81,1,1,chris,106,46,559,108
+81020,Aporcelaimidae,nematodes,Aporcelaimidae,,4.464175,81,1,0,Ferris,110,50,679,112
+81021,Aporcelaimus vorax,nematodes,Aporcelaimus,vorax,0.574983077,81,1,0,chris,112,52,733,114
+81021,Aporcelaimus,nematodes,Aporcelaimus,,0.574983077,81,0,0,chris,111,51,900,113
+81049,Diplogaster,nematodes,Diplogaster,,NA,81,0,0,chris,166,106,820,168
+81050,Diplogasteridae,nematodes,Diplogasteridae,,0.1608375,81,1,0,Ferris,167,107,690,169
+81057,Dorydorella bryophila,nematodes,Dorydorella,bryophila,0.190610828,81,1,1,chris,183,123,579,185
+81058,Dorylaimidae,nematodes,Dorylaimidae,,0.124450682,81,1,1,chris,184,124,598,186
+81058,Dorylaimoidea,nematodes,Dorylaimoidea,,0.124450682,81,1,1,chris,185,125,599,187
+81059,Dorylaimoides limnophilus,nematodes,Dorylaimoides,limnophilus,0.1262375,81,1,0,Ferris,186,126,695,188
+81060,Dorylaimus,nematodes,Dorylaimus,,0.029335835,81,1,0,chris,187,127,773,189
+81063,Ecumenicus monohystera,nematodes,Ecumenicus,monohystera,0.083048166,81,1,0,Ferris,193,133,697,195
+81063,Ecumenicus,nematodes,Ecumenicus,,NA,81,0,0,chris,192,132,830,194
+81064,Epidorylaimus consobrinus,nematodes,Epidorylaimus,consobrinus,0.790477103,81,0,0,chris,196,136,895,198
+81064,Epidorylaimus lugdunensis,nematodes,Epidorylaimus,lugdunensis,0.790477103,81,0,0,chris,197,137,896,199
+81064,Epidorylaimus,nematodes,Epidorylaimus,,0.790477103,81,1,1,chris,195,135,565,197
+81066,Eudorylaimus acuticauda,nematodes,Eudorylaimus,acuticauda,0.341128942,81,0,0,chris,204,144,903,206
+81066,Eudorylaimus carteri,nematodes,Eudorylaimus,carteri,0.341128942,81,1,0,chris,205,145,736,207
+81066,Eudorylaimus centrocercus,nematodes,Eudorylaimus,centrocercus,0.341128942,81,1,1,chris,206,146,570,208
+81066,Eudorylaimus iners,nematodes,Eudorylaimus,iners,0.341128942,81,0,0,chris,207,147,904,209
+81066,Eudorylaimus leuckarti,nematodes,Eudorylaimus,leuckarti,0.341128942,81,0,0,chris,208,148,905,210
+81066,Eudorylaimus similis,nematodes,Eudorylaimus,similis,0.341128942,81,1,0,chris,209,149,737,211
+81066,Eudorylaimus,nematodes,Eudorylaimus,,0.341128942,81,1,1,chris,203,143,569,205
+81081,Labronema paesleri,nematodes,Labronema,paesleri,0.856070568,81,1,0,Ferris,255,195,703,257
+81081,Labronema vulvapapillatum,nematodes,Labronema,vulvapapillatum,0.9179875,81,1,1,Ferris,256,196,549,258
+81081,Labronema,nematodes,Labronema,,NA,81,0,0,chris,254,194,843,256
+81082,Laimydorus doryuris,nematodes,Laimydorus,doryuris,0.769803268,81,1,0,Ferris,258,198,704,260
+81082,Laimydorus parabastiani,nematodes,Laimydorus,parabastiani,0.5582625,81,1,1,Ferris,259,199,550,261
+81082,Laimydorus,nematodes,Laimydorus,,NA,81,0,0,chris,257,197,844,259
+81093,Mesodorylaimus aberrans,nematodes,Mesodorylaimus,aberrans,0.264234042,81,0,0,chris,284,224,909,286
+81093,Mesodorylaimus attenuatus,nematodes,Mesodorylaimus,attenuatus,0.264234042,81,1,0,chris,285,225,739,287
+81093,Mesodorylaimus bastiani,nematodes,Mesodorylaimus,bastiani,0.264234042,81,1,1,chris,286,226,573,288
+81093,Mesodorylaimus derni,nematodes,Mesodorylaimus,derni,0.264234042,81,1,1,chris,287,227,574,289
+81093,Mesodorylaimus mesonyctius,nematodes,Mesodorylaimus,mesonyctius,0.264234042,81,1,0,chris,288,228,740,290
+81093,Mesodorylaimus spengelii,nematodes,Mesodorylaimus,spengelii,0.264234042,81,1,0,chris,289,229,741,291
+81093,Mesodorylaimus,nematodes,Mesodorylaimus,,0.264234042,81,1,1,chris,283,223,572,285
+81096,Microdorylaimus,nematodes,Microdorylaimus,,0.0251125,81,1,1,Ferris,294,234,552,296
+81108,Neodiplogasteridae,nematodes,Neodiplogasteridae,,0.017065708,81,1,1,chris,313,253,668,315
+81111,Nordiidae,nematodes,Nordiidae,,0.085894145,81,1,1,chris,317,257,615,319
+81134,Prodorylaimus acris,nematodes,Prodorylaimus,acris,0.072973716,81,1,0,chris,386,326,758,388
+81134,Prodorylaimus filiarum,nematodes,Prodorylaimus,filiarum,0.072973716,81,0,0,chris,387,327,927,389
+81134,Prodorylaimus mas,nematodes,Prodorylaimus,mas,0.072973716,81,1,0,chris,388,328,759,390
+81134,Prodorylaimus rotundiceps,nematodes,Prodorylaimus,rotundiceps,0.072973716,81,0,0,chris,389,329,928,391
+81134,Prodorylaimus uliginosus,nematodes,Prodorylaimus,uliginosus,0.072973716,81,1,0,chris,390,330,760,392
+81134,Prodorylaimus,nematodes,Prodorylaimus,,0.072973716,81,1,1,chris,385,325,623,387
+81139,Pungentus alpinus,nematodes,Pungentus,alpinus,0.915503541,81,0,0,chris,400,340,893,402
+81139,Pungentus engadinensis,nematodes,Pungentus,engadinensis,0.915503541,81,0,0,chris,401,341,894,403
+81139,Pungentus silvestris,nematodes,Pungentus,silvestris,0.915503541,81,1,1,chris,402,342,563,404
+81139,Pungentus,nematodes,Pungentus,,0.915503541,81,1,1,chris,399,339,562,401
+81140,Qudsianematidae,nematodes,Qudsianematidae,,0.310246315,81,1,1,chris,403,343,571,405
+81151,Thornenematidae,nematodes,Thornenematidae,,0.169301823,81,1,1,chris,436,376,582,438
+81152,Thornia propinqua,nematodes,Thornia,propinqua,0.915503541,81,1,1,chris,437,377,564,439
+81153,Torumanawa,nematodes,Torumanawa,,0.376584427,81,1,0,Ferris,438,378,720,440
+82010,Astigmata,micro-arthropods,Astigmata,,0.068614369,82,1,0,chris,782,570,411,784
+82024,Ceratozetes gracilis,micro-arthropods,Ceratozetes,gracilis,0.796823627,82,1,0,chris,805,593,360,807
+82024,Ceratozetes mediocris,micro-arthropods,Ceratozetes,mediocris,0.796823627,82,1,0,chris,806,594,361,808
+82024,Ceratozetes,micro-arthropods,Ceratozetes,,0.796823627,82,1,1,chris,804,592,202,806
+82027,Cilliba,micro-arthropods,Cilliba,,2.43327229,82,1,0,chris,813,601,310,815
+82043,Erythraeidae,micro-arthropods,Erythraeidae,,0.642937743,82,1,1,chris,851,639,207,853
+82046,Eupodes,micro-arthropods,Eupodes,,0.505807898,82,1,1,chris,865,653,215,867
+82047,Eupodidae,micro-arthropods,Eupodidae,,0.505807898,82,0,0,chris,866,654,510,868
+82057,Humerobates rostrolamellatus,micro-arthropods,Humerobates,rostrolamellatus,1.919933666,82,1,1,chris,894,682,172,896
+82075,Mesostigmata,micro-arthropods,Mesostigmata,,0.194202315,82,1,1,chris,964,752,240,966
+82083,Nenteria,micro-arthropods,Nenteria,,0.897227689,82,1,0,chris,977,765,358,979
+82090,Oribatida,micro-arthropods,Oribatida,,0.194202315,82,1,1,chris,994,782,242,996
+82106,Protodinychus punctatus,micro-arthropods,Protodinychus,punctatus,1.770656214,82,1,1,chris,1053,841,173,1055
+82122,Scheloribates laevigatus,micro-arthropods,Scheloribates,laevigatus,0.796823627,82,1,1,chris,1089,877,204,1091
+82122,Scheloribates latipes,micro-arthropods,Scheloribates,latipes,0.796823627,82,0,0,chris,1090,878,505,1092
+82122,Scheloribates pallidulus,micro-arthropods,Scheloribates,pallidulus,0.796823627,82,0,0,chris,1091,879,506,1093
+82125,Scutacarus crassisetus,micro-arthropods,Scutacarus,crassisetus,0.123275793,82,0,0,chris,1094,882,533,1096
+82125,Scutacarus,micro-arthropods,Scutacarus,,0.123275793,82,1,1,chris,1093,881,251,1095
+82131,Stigmaeidae,micro-arthropods,Stigmaeidae,,0.846267744,82,1,1,chris,1113,901,199,1115
+82134,Tarsonemus,micro-arthropods,Tarsonemus,,0.099468261,82,1,1,chris,1129,917,256,1131
+83006,Diplura,micro-arthropods,Diplura,,13.41460214,83,1,0,chris,836,624,276,838
+91047,Deladenus,nematodes,Deladenus,,NA,91,0,0,chris,161,101,819,163
+91079,Heterorhabditis,nematodes,Heterorhabditis,,NA,91,0,0,chris,251,191,841,253
+91147,Steinernematidae,nematodes,Steinernematidae,,NA,91,0,0,chris,423,363,884,425
+92012,Balaustium,micro-arthropods,Balaustium,,1.581179527,92,1,0,chris,784,572,322,786
+92041,Ereynetidae,micro-arthropods,Ereynetidae,,1.176,92,1,0,didden94,849,637,263,851
+92062,Johnstonianidae,micro-arthropods,Johnstonianidae,,1.176,92,1,0,didden94,916,704,266,918
+92105,Prostigmata,micro-arthropods,Prostigmata,,0.123275793,92,1,0,chris,1050,838,408,1052
+92108,Pseudoparasitus placentulus,micro-arthropods,Pseudoparasitus,placentulus,1.359660991,92,1,1,chris,1061,849,181,1063
+92108,Pseudoparasitus sellnicki,micro-arthropods,Pseudoparasitus,sellnicki,1.359660991,92,0,0,chris,1062,850,490,1064
+92110,Pyemotes,micro-arthropods,Pyemotes,,0.123275793,92,1,1,chris,1068,856,250,1070
+92111,Pyemotidae,micro-arthropods,Pyemotidae,,0.123275793,92,1,0,chris,1069,857,409,1071
+92138,Trombidiidae,micro-arthropods,Trombidiidae,,30.63535123,92,1,1,chris,1141,929,142,1143

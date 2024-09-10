@@ -120,7 +120,8 @@ lookup <- c(
   longestLength = "length.max.cm.",
   meanLength = "length.mean.cm.",
   sizeMethod = "size.method",
-  sizeReference = "size.citation"
+  sizeReference = "size.citation",
+  basisOfRecord = "interaction.classification"
 )
 
 interaction_res <- db |> 
@@ -139,8 +140,8 @@ stopifnot(nrow(interaction_res) == nrow(interaction_con))
 stopifnot(all(interaction_res$foodwebName == interaction_con$foodwebName))
 stopifnot(
   identical(
-    interaction_res |> select(contains("interaction")),
-    interaction_con |> select(contains("interaction"))
+    interaction_res |> select(contains("interaction|basis")),
+    interaction_con |> select(contains("interaction|basis"))
   )
 )
 
@@ -149,13 +150,14 @@ interactions <- bind_cols(
     select(
       foodwebName,
       resourceID = taxonID,
-      matches("interaction")
+      matches("interaction|basis")
     ),
   interaction_con |> 
     transmute(consumerID = taxonID)
 ) |> 
   rownames_to_column(var = "interactionID") |> 
-  relocate(interactionID, .before = "foodwebName")
+  relocate(interactionID, .before = "foodwebName") |> 
+  mutate(basisOfRecord = ifelse(basisOfRecord == "ibi", "individual", "group"))
 
 stopifnot(nrow(db) == nrow(interactions))
 

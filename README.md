@@ -71,8 +71,9 @@ foodwebName<br> <span style="color:red">interactionType</span><br> <span
 style="color:red">interactionDimensionality</span><br> <span
 style="color:red">link.methodology =\> interactionMethod</span><br>
 <span style="color:red">link.citation =\>
-interactionReference</span><br> ~~interaction.classification~~, cannot
-figure out what this is <br> <span style="color:red">link.citation =\>
+interactionReference</span><br> <span
+style="color:red">interaction.classification =\>
+basisOfRecord</span><br> <span style="color:red">link.citation =\>
 interactionReference</span><br> <span style="color:red">notes =\>
 interactionRemarks</span><br>
 
