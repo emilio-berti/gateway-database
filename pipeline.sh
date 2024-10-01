@@ -182,7 +182,7 @@ echo "   - New dataset is: ${bold}data/gateway-v.2.0.csv${normal}"
 if [[ $clean == yes ]] || [[ ! -e "steps/.renamed" ]]
 then
   echo "  - Rename fields and split tables:"
-  Rscript --vanilla scripts/rename.R data/gateway-v.2.0.csv &&
+  Rscript --vanilla scripts/relational.R data/gateway-v.2.0.csv &&
   touch steps/.renamed
 else
   echo "  - Fields already renamed and tables split"

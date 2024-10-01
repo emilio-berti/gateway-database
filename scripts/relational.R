@@ -14,6 +14,16 @@ datapath <- paste(datapath[1 : (length(datapath) - 1)], collapse = "/")
 stopifnot("db" %in% ls())
 
 db <- read_csv(db, show_col_types = FALSE)
+db$foodweb.name <- ifelse(
+  grepl("grand caricaie marsh", db$foodweb.name),  # foodweb name sampled in multiple ecosystems
+  paste(db$foodweb.name, db$ecosystem.type, sep = " - "),
+  db$foodweb.name
+)
+db$foodweb.name <- ifelse(
+  grepl("carpinteria", db$foodweb.name),  # foodweb name sampled in multiple ecosystems
+  paste(db$foodweb.name, db$ecosystem.type, sep = " - "),
+  db$foodweb.name
+)
 
 # Foodweb table --------------
 lookup <- c(
@@ -30,10 +40,17 @@ lookup <- c(
   LatestDateCollected = "sampling.end.year"
 )
 
-foodwebs <- db |> 
+sites <- db |> 
   select(all_of(lookup)) |> 
-  distinct_all()
-foodwebs |> write_csv(file.path(datapath, "foodwebs.csv"))
+  distinct_all() |> 
+  mutate(
+    verbatimElevation = ifelse(is.na(verbatimElevation), -9999, verbatimElevation),
+    verbatimDepth = ifelse(is.na(verbatimDepth), -9999, verbatimDepth)
+  ) |> 
+  rownames_to_column(var = "ID") |> 
+  relocate("ID", .before = "foodwebName")
+
+sites |> write_csv(file.path(datapath, "sites.csv"))
 
 # Species table ---------------
 species <- bind_rows(
@@ -69,7 +86,8 @@ lookup <- c(
 species <- species |> 
   select(all_of(lookup)) |> 
   distinct_all() |> 
-  rownames_to_column(var = "taxonID")
+  rownames_to_column(var = "ID") |> 
+  mutate(across(where(is.numeric), ~ifelse(is.na(.x), -9999, .x)))
 
 species |> write_csv(file.path(datapath, "species.csv"))
 
@@ -127,14 +145,18 @@ lookup <- c(
 interaction_res <- db |> 
   select(-matches("con[.]")) |> 
   rename_with(~sub("res[.]", "", .x)) |> 
-  select(any_of(lookup)) |> 
+  select(any_of(lookup)) |>
+  mutate(across(where(is.numeric), ~ifelse(is.na(.x), -9999, .x))) |> 
   left_join(species)
 
 interaction_con <- db |> 
   select(-matches("re[.]")) |> 
   rename_with(~sub("con[.]", "", .x)) |> 
   select(any_of(lookup)) |> 
+  mutate(across(where(is.numeric), ~ifelse(is.na(.x), -9999, .x))) |> 
   left_join(species)
+
+interaction_con |> filter(is.na(ID)) |> select(ID, acceptedTaxonName)
 
 stopifnot(nrow(interaction_res) == nrow(interaction_con))
 stopifnot(all(interaction_res$foodwebName == interaction_con$foodwebName))
@@ -149,15 +171,24 @@ interactions <- bind_cols(
   interaction_res |> 
     select(
       foodwebName,
-      resourceID = taxonID,
+      resourceID = ID,
       matches("interaction|basis")
     ),
   interaction_con |> 
-    transmute(consumerID = taxonID)
+    transmute(consumerID = ID)
 ) |> 
-  rownames_to_column(var = "interactionID") |> 
-  relocate(interactionID, .before = "foodwebName") |> 
-  mutate(basisOfRecord = ifelse(basisOfRecord == "ibi", "individual", "group"))
+  rownames_to_column(var = "ID") |> 
+  relocate("ID", .before = "foodwebName") |> 
+  relocate("consumerID", .after = "resourceID") |> 
+  mutate(basisOfRecord = ifelse(basisOfRecord == "ibi", "individual", "group")) |> 
+  left_join(
+    foodwebs |> transmute(foodwebID = ID, foodwebName),
+    by = "foodwebName",
+    multiple = "all"
+  ) |> 
+  relocate("foodwebID", .before = "foodwebName") |> 
+  select(-foodwebName) |> 
+  mutate(across(where(is.numeric), ~ifelse(is.na(.x), -9999, .x)))
 
 stopifnot(nrow(db) == nrow(interactions))
 

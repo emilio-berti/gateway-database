@@ -1,5 +1,5 @@
 ---
-title: GATEWAy database from v.1 to v.2
+title: "GATEWAy database from v.1 to v.2"
 author: Emilio Berti
 output: github_document
 ---
@@ -76,6 +76,8 @@ Strike-through columns have been dropped.
 <span style="color:red">link.citation => interactionReference</span><br>
 <span style="color:red">notes => interactionRemarks</span><br>
 
+<img title="relations" alt="relations" src="figures/relations.png" width="100%">
+
 # Pipeline
 
 To run the whole pipeline at once:
@@ -92,13 +94,13 @@ This runs (in order):
   4. Query the species names against GBIF: [harmonize-taxonomy.py](harmonize-taxonomy.py).
   5. Combine v.1.0 with new data: [scripts/combine.R](scripts/combine.R).
   6. Harmonize taxonomy of the database: [harmonize-taxonomy.R](harmonize-taxonomy.R).
-  7. Saves the new database as _gateway-v.2.0.csv_.
-  8. Rename fields and split table into relational tables: [scripts/rename.R](scripts/rename.R).
+  7. Saves the new database as `gateway-v.2.0.csv`.
+  8. Rename fields and split table into relational tables: [scripts/relational.R](scripts/relational.R).
 
 Some of this steps can take some time.
 To avoid re-running already completed steps, once the step is  completed successfully an hidden (empty) file is added to the [steps](steps) folder.
 Steps that have such files will not be re-ran.
-You can re-run the whole pipeline from scratch specifying the option _--clean_:
+You can re-run the whole pipeline from scratch specifying the option `--clean`:
 
 ```bash
 bash pipeline.sh --clean
@@ -106,7 +108,7 @@ bash pipeline.sh --clean
 
 To see available options and usage: `bash pipeline.sh --help`.
 
-# PostGIS database
+# PostGRES database
 
 ## Create database
 
@@ -115,4 +117,226 @@ psql -U postgres
 CREATE DATABASE gateway;
 \c gateway;
 CREATE EXTENSION postgis;
+```
+
+## Foodwebs table
+
+```bash
+CREATE TABLE foodwebs(
+  ID INTEGER PRIMARY KEY,
+  foodwebName  VARCHAR,
+  decimalLongitude  REAL,
+  decimalLatitude  REAL,
+  ecosystemType  VARCHAR,
+  geographicLocation  VARCHAR,
+  studySite  VARCHAR,
+  verbatimElevation  REAL,
+  verbatimDepth  REAL,
+  samplingTime  VARCHAR,
+  EarliestDateCollected  VARCHAR,
+  LatestDateCollected  VARCHAR
+);
+
+COPY foodwebs FROM '/home/eb97ziwi/gateway-database/data/foodwebs.csv' CSV HEADER;
+```
+
+## Species table
+
+```bash
+CREATE TABLE species(
+  ID INTEGER PRIMARY KEY,
+  acceptedTaxonName VARCHAR,
+  taxonRank VARCHAR,
+  taxonomicStatus VARCHAR,
+  vernacularName VARCHAR,
+  taxonomicLevel VARCHAR,
+  lifeStage VARCHAR,
+  metabolicType VARCHAR,
+  movementType VARCHAR,
+  lowestMass REAL,
+  highestMass REAL,
+  meanMass REAL,
+  shortestLength REAL,
+  longestLength REAL,
+  meanLength REAL,
+  sizeMethod VARCHAR,
+  sizeReference VARCHAR
+);
+
+COPY species FROM '/home/eb97ziwi/gateway-database/data/species.csv' CSV HEADER;
+```
+
+## Interaction table
+```bash
+CREATE TABLE interactions(
+  ID INTEGER PRIMARY KEY,
+  foodwebID INTEGER,
+  resourceID INTEGER,
+  consumerID INTEGER,
+  interactionType VARCHAR,
+  interactionDimensionality VARCHAR,
+  interactionMethod VARCHAR,
+  interactionReference VARCHAR,
+  interactionRemarks VARCHAR,
+  basisOfRecord VARCHAR
+);
+
+COPY interactions FROM '/home/eb97ziwi/gateway-database/data/interactions.csv' CSV HEADER;
+```
+
+## Table schema
+
+For <https::/dbdiagram.io/d>
+```bash
+Table sites {
+  ID INTEGER [primary key]
+  foodwebName  VARCHAR
+  decimalLongitude  REAL
+  decimalLatitude  REAL
+  ecosystemType  VARCHAR
+  geographicLocation  VARCHAR
+  studySite  VARCHAR
+  verbatimElevation  REAL
+  verbatimDepth  REAL
+  samplingTime  VARCHAR
+  EarliestDateCollected  VARCHAR
+  LatestDateCollected  VARCHAR
+}
+
+Table species {
+  ID INTEGER [primary key]
+  acceptedTaxonName VARCHAR
+  taxonRank VARCHAR
+  taxonomicStatus VARCHAR
+  vernacularName VARCHAR
+  taxonomicLevel VARCHAR
+  lifeStage VARCHAR
+  metabolicType VARCHAR
+  movementType VARCHAR
+  lowestMass REAL
+  highestMass REAL
+  meanMass REAL
+  shortestLength REAL
+  longestLength REAL
+  meanLength REAL
+  sizeMethod VARCHAR
+  sizeReference VARCHAR
+}
+
+Table interactions {
+  ID INTEGER [primary key]
+  foodwebID INTEGER
+  resourceID INTEGER
+  consumerID INTEGER
+  interactionType VARCHAR
+  interactionDimensionality VARCHAR
+  interactionMethod VARCHAR
+  interactionReference VARCHAR
+  interactionRemarks VARCHAR
+  basisOfRecord VARCHAR
+}
+
+Ref: foodwebs.ID < interactions.foodwebID
+Ref: species.ID < interactions.consumerID
+Ref: species.ID < interactions.resourceID
+```
+
+
+```
+Table foodwebs {
+  ID INTEGER [primary key]
+  foodwebName  VARCHAR
+  decimalLongitude  REAL
+  decimalLatitude  REAL
+  ecosystemType  VARCHAR
+  geographicLocation  VARCHAR
+  studySite  VARCHAR
+  verbatimElevation  REAL
+  verbatimDepth  REAL
+  samplingTime  VARCHAR
+  EarliestDateCollected  VARCHAR
+  LatestDateCollected  VARCHAR
+}
+
+Table metabolic_types {
+  ID INTEGER [primary key]
+  type VARCHAR
+}
+
+Table species {
+  ID INTEGER [primary key]
+  metabolicTypeID INTEGER [ref: > metabolic_types.ID]
+  acceptedTaxonName VARCHAR
+  taxonRank VARCHAR
+  taxonomicStatus VARCHAR
+  vernacularName VARCHAR
+  taxonomicLevel VARCHAR
+}
+
+Table interaction_methods {
+  ID INTEGER [primary key]
+  method VARCHAR
+}
+
+Table references {
+  ID INTEGER [primary key]
+  reference VARCHAR
+}
+
+Table interactions {
+  ID INTEGER [primary key]
+  foodwebID INTEGER [ref: > foodwebs.ID]
+  resourceID INTEGER [ref: > species.ID]
+  consumerID INTEGER [ref: > species.ID]
+  typeID INTEGER [ref:> interaction_types.ID]
+  referenceID INTEGER [ref: > references.ID]
+  methodID INTEGER [ref: > interaction_methods.ID]
+  interactionDimensionality VARCHAR
+  interactionMethod VARCHAR
+  interactionRemarks VARCHAR
+  basisOfRecord VARCHAR
+}
+
+Table movements {
+  ID INTEGER [primary key]
+  type VARCHAR
+}
+
+Table interaction_types {
+  ID INTEGER [primary key]
+  type VARCHAR
+}
+
+Table life_stages {
+  ID INTEGER [primary key]
+  lifeStage VARCHAR
+}
+
+Table size_methods {
+  ID INTEGER [primary key]
+  method VARCHAR
+}
+
+Table communities {
+  ID INTEGER [primary key]
+  speciesID INTEGER [ref: > species.ID]
+  foodwebID INTEGER [ref: > foodwebs.ID]
+  lifestageID INTEGER [ref: > life_stages.ID]
+  movementID INTEGER [ref: > movements.ID]
+  referenceID INTEGER [ref: > references.ID]
+  sizeMethodID INTEGER [ref: > size_methods.ID]
+  lowestMass REAL
+  highestMass REAL
+  meanMass REAL
+  shortestLength REAL
+  longestLength REAL
+  meanLength REAL
+  biomass REAL
+}
+```
+
+# Generate this HTML Readme
+```bash
+Rscript --vanilla -e "rmarkdown::render('README.Rmd')"
+pandoc -s --toc -c readme.css README.md -o README.html --metadata title="GATEWAy Database"
 ```
