@@ -119,7 +119,7 @@ rm(newone)
 communities <- species_old %>% 
   select(ID, lowestMass, highestMass, meanMass, shortestLength, longestLength, meanLength,
          acceptedTaxonName, metabolicType, movementType, sizeReference, sizeMethod, lifeStage) %>% 
-  left_join(maps_sp_fw, join_by(ID)) %>% rename('ID', 'ID_sp_old') %>%   # retrieve food web ID. No need to original species ID as species definition changed
+  left_join(maps_sp_fw, join_by(ID)) %>% rename('ID_sp_old' = 'ID') %>%   # retrieve food web ID. No need to original species ID as species definition changed
   left_join(references, by = c('sizeReference' = 'reference')) %>% select(-sizeReference) %>% #size reference
   left_join(movement_types, join_by(movementType)) %>% select(-movementType) %>% 
   left_join(size_methods, join_by(sizeMethod)) %>% select(-sizeMethod) %>% 
