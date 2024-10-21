@@ -190,6 +190,19 @@ else
 fi
 
 # --------------------------------------
+# restructure for relational database
+# --------------------------------------
+if [[ $clean == yes ]] || [[ ! -e "steps/.restructured" ]]
+then
+  echo "  - Rename fields and split tables:"
+  Rscript --vanilla scripts/restructure-relational.R data &&
+  touch steps/.restructured
+else
+  echo "  - Tables already restructures"
+
+fi
+
+# --------------------------------------
 # summary
 # --------------------------------------
 echo "  - Summary:"
