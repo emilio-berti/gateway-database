@@ -8,15 +8,9 @@ DESCRIPTION
     Create the new version of the GATEWAy database
 
 OPTIONS
-   --aggregate             aggregate lifestages
-                            defaults to: no
 
     --clean                 does EVERYTHING
                             defaults to: no
-
-    --add-new-data          add new datasets
-                            defaults to: no
-                            this is used by the database maintainers when needed
 
     --verbose | -v          adds verbose output
                             defaults to: no
@@ -34,18 +28,8 @@ do
       exit
       ;;
 
-    --aggregate)
-      aggregate=yes
-      shift
-      ;;
-
     --clean)
       clean=yes
-      shift
-      ;;
-
-    --add-new-data)
-      add=yes
       shift
       ;;
 
@@ -70,15 +54,18 @@ do
   esac
 done
 
-# if [[ $verbose == yes ]]
-# then
-#   cat << EOF
-# EOF
-# fi
+if [[ $verbose == yes ]]
+then
+  cat << EOF
+  clean=$clean
+
+EOF
+fi
 
 bold=$(tput bold)
 normal=$(tput sgr0)
 
+echo ""
 echo " ${bold}========== GATEWAy v.2.0 ==========${normal} "
 
 # --------------------------------------
@@ -111,7 +98,7 @@ fi
 # --------------------------------------
 # process new data
 # --------------------------------------
-if [[ $clean == yes ]] || [[ ! -e "steps/.newdata" ]] && [[ $add == yes ]]
+if [[ $clean == yes ]] || [[ ! -e "steps/.newdata" ]]
 then
   echo "   - Process new data"
   Rscript --vanilla scripts/mulder.R &&
@@ -130,17 +117,15 @@ else
   echo "   - Names already extracted"
 fi
 
-
-
-
 # --------------------------------------
 # query against GBIF
 # --------------------------------------
 if [[ $clean == yes ]] || [[ ! -e "steps/.gbif" ]]
 then
   echo "   - Querying GBIF"
-  python3 scripts/harmonize-taxonomy.py &&
+  Rscript --vanilla scripts/taxonomic-backbone.R data &&
   touch steps/.gbif
+  cp data/taxonomy.csv data/v.2.0/taxonomy.csv
 else
   echo "   - GBIF already queried"
 fi
@@ -150,7 +135,7 @@ fi
 # --------------------------------------
 if [[ $clean == yes ]] || [[ ! -e "steps/.combined" ]]
 then
-  echo "  - Add new data"
+  echo "   - Add new data"
   Rscript --vanilla scripts/combine.R data/gateway-cleaned.csv &&
   touch steps/.combined
 else
@@ -173,43 +158,55 @@ fi
 # --------------------------------------
 # rename as v.2.0
 # --------------------------------------
-cp data/gateway-harmonized.csv data/gateway-v.2.0.csv
-echo "   - New dataset is: ${bold}data/gateway-v.2.0.csv${normal}"
+cp data/gateway-harmonized.csv data/v.2.0/GATEWAy-v.2.0.csv
+echo "   - New dataset is: ${bold}data/v.2.0/GATEWAy-v.2.0.csv${normal}"
 
 # --------------------------------------
-# rename and split
+# rename and split tables for website
 # --------------------------------------
 if [[ $clean == yes ]] || [[ ! -e "steps/.renamed" ]]
 then
-  echo "  - Rename fields and split tables:"
+  echo "   - Rename fields and split tables"
   Rscript --vanilla scripts/relational.R data/gateway-v.2.0.csv &&
   touch steps/.renamed
 else
-  echo "  - Fields already renamed and tables split"
+  echo "   - Fields already renamed and tables split"
 
 fi
 
 # --------------------------------------
-# restructure for relational database
+# restructure database for website
 # --------------------------------------
 if [[ $clean == yes ]] || [[ ! -e "steps/.restructured" ]]
 then
-  echo "  - Rename fields and split tables:"
+  echo "   - Restructure database for SQL"
   Rscript --vanilla scripts/restructure-relational.R data &&
   touch steps/.restructured
 else
-  echo "  - Tables already restructures"
+  echo "   - Tables already restructures"
 
+fi
+
+# --------------------------------------
+# shapefiles for website
+# --------------------------------------
+if [[ $clean == yes ]] || [[ ! -e "steps/.shapefiled" ]]
+then
+  echo "   - Create shapefile"
+  Rscript --vanilla scripts/shapefiles.R data &&
+  touch steps/.shapefiled
+else
+  echo "   - Shapefiles already created"
 fi
 
 # --------------------------------------
 # summary
 # --------------------------------------
 echo "  - Summary:"
-fw=$(wc -l data/foodwebs.csv | cut -d ' ' -f 1)
-n=$(wc -l data/interactions.csv | cut -d ' ' -f 1)
-echo "    -- $fw unique food webs"
-echo "    -- $n unique interactions"
+fw=$(wc -l data/v.2.0/foodwebs.csv | cut -d ' ' -f 1)
+n=$(wc -l data/v.2.0/interactions.csv | cut -d ' ' -f 1)
+echo "      -- $fw unique food webs"
+echo "      -- $n unique interactions"
 
 echo " ================================================== "
 echo ""

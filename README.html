@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>GATEWAy Database</title>
+  <title>README</title>
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -88,9 +88,6 @@
   <![endif]-->
 </head>
 <body>
-<header id="title-block-header">
-<h1 class="title">GATEWAy Database</h1>
-</header>
 <nav id="TOC" role="doc-toc">
 <ul>
 <li><a href="#gateway-database-from-v.1-to-v.2"
@@ -234,13 +231,13 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="
 <h2 id="create-database">Create database</h2>
 <div class="sourceCode" id="cb3"><pre
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">psql</span> <span class="at">-U</span> postgres</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="ex">CREATE</span> DATABASE gateway<span class="kw">;</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="ex">\c</span> gateway<span class="kw">;</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="ex">CREATE</span> DATABASE econetlab<span class="kw">;</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="ex">\c</span> econetlab<span class="kw">;</span></span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="ex">CREATE</span> EXTENSION postgis<span class="kw">;</span></span></code></pre></div>
 <h2 id="foodwebs-table">Foodwebs table</h2>
 <div class="sourceCode" id="cb4"><pre
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">CREATE</span> TABLE foodwebs<span class="er">(</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="ex">ID</span> INTEGER PRIMARY KEY,</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="ex">foodwebID</span> INTEGER PRIMARY KEY,</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="ex">foodwebName</span>  VARCHAR,</span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="ex">decimalLongitude</span>  REAL,</span>
 <span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  <span class="ex">decimalLatitude</span>  REAL,</span>

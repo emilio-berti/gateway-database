@@ -36,11 +36,11 @@ lookup <- c(
   verbatimElevation = "altitude",
   verbatimDepth = "depth",
   samplingTime = "sampling.time",
-  EarliestDateCollected = "sampling.start.year",
-  LatestDateCollected = "sampling.end.year"
+  earliestDateCollected = "sampling.start.year",
+  latestDateCollected = "sampling.end.year"
 )
 
-sites <- db |> 
+foodwebs <- db |> 
   select(all_of(lookup)) |> 
   distinct_all() |> 
   mutate(
@@ -50,7 +50,7 @@ sites <- db |>
   rownames_to_column(var = "ID") |> 
   relocate("ID", .before = "foodwebName")
 
-sites |> write_csv(file.path(datapath, "sites.csv"))
+foodwebs |> write_csv(file.path(datapath, "foodwebs.csv"))
 
 # Species table ---------------
 species <- bind_rows(
@@ -91,17 +91,17 @@ species <- species |>
 
 species |> write_csv(file.path(datapath, "species.csv"))
 
-# test taxonID are unique
+# test ID are unique
 if (
   (species |> 
-    select(-"taxonID") |> 
+    select(-"ID") |> 
     distinct_all() |> 
     group_by_all() |> 
     tally() |> 
     pull(n) |> 
     max()) > 1
   ) {
-  stop("taxonID is not uniquely identified.")
+  stop("ID is not uniquely identified.")
 }
 
 # Interaction table ----------
@@ -147,16 +147,32 @@ interaction_res <- db |>
   rename_with(~sub("res[.]", "", .x)) |> 
   select(any_of(lookup)) |>
   mutate(across(where(is.numeric), ~ifelse(is.na(.x), -9999, .x))) |> 
-  left_join(species)
+  left_join(
+    species,
+    by = join_by(
+      acceptedTaxonName, taxonRank, taxonomicStatus,
+      vernacularName, lifeStage, metabolicType, movementType, 
+      lowestMass, highestMass, meanMass, 
+      shortestLength, longestLength, meanLength, 
+      sizeMethod, sizeReference
+    )
+  )
 
 interaction_con <- db |> 
   select(-matches("re[.]")) |> 
   rename_with(~sub("con[.]", "", .x)) |> 
   select(any_of(lookup)) |> 
   mutate(across(where(is.numeric), ~ifelse(is.na(.x), -9999, .x))) |> 
-  left_join(species)
-
-interaction_con |> filter(is.na(ID)) |> select(ID, acceptedTaxonName)
+  left_join(
+    species,
+      by = join_by(
+      acceptedTaxonName, taxonRank, taxonomicStatus,
+      vernacularName, lifeStage, metabolicType, movementType, 
+      lowestMass, highestMass, meanMass, 
+      shortestLength, longestLength, meanLength, 
+      sizeMethod, sizeReference
+    )  
+  )
 
 stopifnot(nrow(interaction_res) == nrow(interaction_con))
 stopifnot(all(interaction_res$foodwebName == interaction_con$foodwebName))

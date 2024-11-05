@@ -123,8 +123,8 @@ To see available options and usage: `bash pipeline.sh --help`.
 
 ``` bash
 psql -U postgres
-CREATE DATABASE gateway;
-\c gateway;
+CREATE DATABASE econetlab;
+\c econetlab;
 CREATE EXTENSION postgis;
 ```
 
@@ -132,7 +132,7 @@ CREATE EXTENSION postgis;
 
 ``` bash
 CREATE TABLE foodwebs(
-  ID INTEGER PRIMARY KEY,
+  foodwebID INTEGER PRIMARY KEY,
   foodwebName  VARCHAR,
   decimalLongitude  REAL,
   decimalLatitude  REAL,

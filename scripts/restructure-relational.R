@@ -1,4 +1,5 @@
 suppressPackageStartupMessages(library(tidyverse))
+suppressPackageStartupMessages(library(testthat))
 options(readr.show_progress = FALSE)
 
 if (!interactive()) {
@@ -29,7 +30,10 @@ foodwebs <- read_csv(
 ) |> 
   mutate(across(everything(), ~ifelse(
     grepl("^na$", .x, ignore.case = TRUE), NA, .x
-  )))
+  ))) |> 
+  mutate(foodwebID = ID) |> 
+  relocate(foodwebID, .before = "ID") |> 
+  select(-ID)
 
 # reference table ------
 references <- tibble(
@@ -159,22 +163,27 @@ species <- species |>
   ungroup() |> 
   mutate(across(contains("ID"), ~as.numeric(.x)))
 
+
 # in the old database, get information to know in which food webs species occur
-communities <- bind_rows(
-  communities |> 
-    left_join(
-      interactions |> select(foodwebID, resourceID),
-      by = c('ID' = 'resourceID')
-    ),
-  communities |> 
-    left_join(
-      interactions |> select(foodwebID, consumerID),
-      by = c('ID' = 'consumerID')
-    )
-)
+communities <- communities |> 
+  left_join(
+    interactions |> 
+      select(foodwebID, resourceID, consumerID) |> 
+      pivot_longer(
+        cols = c("resourceID", "consumerID"),
+        names_to = "taxon",
+        values_to = "ID"
+      ) |> 
+      select(-"taxon") |> 
+      distinct_all(),
+    by = "ID"
+  )
 
 communities <- communities |> 
-  left_join(species) |> 
+  left_join(
+    species,
+    by = join_by(ID, acceptedTaxonName, taxonRank, taxonomicStatus, vernacularName)
+  ) |> 
   select(-ID, -acceptedTaxonName, -taxonRank, -taxonomicStatus, -vernacularName) |> 
   select(
     foodwebID, speciesID, lifeStageID, metabolicTypeID, movementTypeID,
@@ -212,17 +221,35 @@ species <- species |>
   select(-ID) |> 
   distinct_all()
 
-stopifnot(
-  communities |> distinct_all() |> nrow() == communities |> nrow()
+test_that("test species size", 
+  expect_equal(
+    species |> distinct_all() |> nrow(),
+    species |> nrow()
+  )
 )
 
-stopifnot(
-  interactions |> distinct_all() |> nrow() == interactions |> nrow()
+test_that("test communities size",
+  expect_equal(
+    communities |> distinct_all() |> nrow(),
+    communities |> nrow()
+  )
 )
 
-stopifnot(
-  species |> distinct_all() |> nrow() == species |> nrow()
+test_that("test interactions size I",
+  expect_equal(
+    interactions |> distinct_all() |> nrow(),
+    interactions |> nrow()
+  )
 )
+
+
+test_that("test interactions size II", 
+  expect_equal(
+    suppressMessages(read_csv("data/interactions.csv")) |> nrow(),
+    interactions |> nrow()
+  )
+)
+
 
 write_csv(foodwebs, file.path(datadir, "v.2.0", "foodwebs.csv"))
 write_csv(species, file.path(datadir, "v.2.0", "species.csv"))

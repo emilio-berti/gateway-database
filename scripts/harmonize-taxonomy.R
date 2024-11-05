@@ -20,7 +20,6 @@ shape <- dim(db)
 taxonomy <- suppressMessages(
   taxonomy |> 
     read_csv(show_col_types = FALSE) |> 
-    select(-`...1`) |> 
     distinct_all()
 )
 
@@ -31,11 +30,11 @@ not_found <- taxonomy |>
   pull(original) |> 
   length()
 
-message("    - ", not_found, " names not found in GBIF.")
+message("      - ", not_found, " names not found in GBIF.")
 
 # save changed to summary files ------
 taxonomy |> 
-  filter(!is.na(gbif), gbif != original) |> 
+  filter(!is.na(gbif), tolower(gbif) != original) |> 
   distinct_all() |> 
   write_csv(file.path(data_dir, "names-changed.csv"))
 
@@ -50,20 +49,24 @@ db <- db |>
   select(-res.taxonomy.level, -con.taxonomy.level) |> 
   left_join(
     taxonomy |> 
-      transmute(res.taxonomy = original,
-                res.gbif = gbif,
-                res.taxonomy.level = rank,
-                res.taxonomy.status = status,
-                res.key = key),
+      transmute(
+        res.taxonomy = original,
+        res.gbif = gbif,
+        res.taxonomy.level = rank,
+        res.taxonomy.status = status,
+        res.key = key
+      ),
     by = "res.taxonomy"
   ) |> 
   left_join(
       taxonomy |> 
-        transmute(con.taxonomy = original,
-                  con.gbif = gbif,
-                  con.taxonomy.level = rank,
-                  con.taxonomy.status = status,
-                  con.key = key),
+        transmute(
+          con.taxonomy = original,
+          con.gbif = gbif,
+          con.taxonomy.level = rank,
+          con.taxonomy.status = status,
+          con.key = key
+        ),
     by = "con.taxonomy"
   )
 
@@ -76,12 +79,17 @@ test_that(
   expect_equal(shape[1], nrow(db))
 )
 db <- db |> 
-  mutate(res.taxonomy = ifelse(is.na(res.gbif),
-                               res.taxonomy,
-                               res.gbif),
-         con.taxonomy = ifelse(is.na(con.gbif),
-                               con.taxonomy,
-                               con.gbif)) |> 
+  mutate(
+    res.taxonomy = ifelse(
+      is.na(res.gbif),
+      res.taxonomy,
+      res.gbif
+    ),
+    con.taxonomy = ifelse(
+      is.na(con.gbif),
+      con.taxonomy,
+      con.gbif)
+  ) |> 
   select(-res.gbif, -con.gbif)
 
 stopifnot(any(!is.na(db[["res.taxonomy"]])))

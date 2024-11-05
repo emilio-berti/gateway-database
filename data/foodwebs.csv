@@ -1,4 +1,4 @@
-ID,foodwebName,decimalLongitude,decimalLatitude,ecosystemType,geographicLocation,studySite,verbatimElevation,verbatimDepth,samplingTime,EarliestDateCollected,LatestDateCollected
+ID,foodwebName,decimalLongitude,decimalLatitude,ecosystemType,geographicLocation,studySite,verbatimElevation,verbatimDepth,samplingTime,earliestDateCollected,latestDateCollected
 1,grand caricaie marsh dominated by cladietum marisci; mown clmown1 - terrestrial aboveground,6.98182,46.93845,terrestrial aboveground,switzerland; lake neuchatel,grand caricaie,-999,-999,na,na,na
 2,grand caricaie marsh dominated by cladietum marisci; mown clmown1 - lakes,6.98182,46.93845,lakes,switzerland; lake neuchatel,grand caricaie,-999,-999,na,na,na
 3,grand caricaie marsh dominated by cladietum marisci; mown clmown2 - terrestrial aboveground,6.98182,46.93845,terrestrial aboveground,switzerland; lake neuchatel,grand caricaie,-999,-999,na,na,na
