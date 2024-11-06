@@ -187,68 +187,14 @@ COPY interactions FROM '/home/eb97ziwi/gateway-database/data/interactions.csv' C
 ## Table schema
 
 For <https::/dbdiagram.io/d>
-```bash
-Table sites {
-  ID INTEGER [primary key]
-  foodwebName  VARCHAR
-  decimalLongitude  REAL
-  decimalLatitude  REAL
-  ecosystemType  VARCHAR
-  geographicLocation  VARCHAR
-  studySite  VARCHAR
-  verbatimElevation  REAL
-  verbatimDepth  REAL
-  samplingTime  VARCHAR
-  EarliestDateCollected  VARCHAR
-  LatestDateCollected  VARCHAR
-}
-
-Table species {
-  ID INTEGER [primary key]
-  acceptedTaxonName VARCHAR
-  taxonRank VARCHAR
-  taxonomicStatus VARCHAR
-  vernacularName VARCHAR
-  taxonomicLevel VARCHAR
-  lifeStage VARCHAR
-  metabolicType VARCHAR
-  movementType VARCHAR
-  lowestMass REAL
-  highestMass REAL
-  meanMass REAL
-  shortestLength REAL
-  longestLength REAL
-  meanLength REAL
-  sizeMethod VARCHAR
-  sizeReference VARCHAR
-}
-
-Table interactions {
-  ID INTEGER [primary key]
-  foodwebID INTEGER
-  resourceID INTEGER
-  consumerID INTEGER
-  interactionType VARCHAR
-  interactionDimensionality VARCHAR
-  interactionMethod VARCHAR
-  interactionReference VARCHAR
-  interactionRemarks VARCHAR
-  basisOfRecord VARCHAR
-}
-
-Ref: foodwebs.ID < interactions.foodwebID
-Ref: species.ID < interactions.consumerID
-Ref: species.ID < interactions.resourceID
-```
-
 
 ```
 Table foodwebs {
-  ID INTEGER [primary key]
+  foodwebID INTEGER [primary key]
   foodwebName  VARCHAR
+  ecosystemType  VARCHAR
   decimalLongitude  REAL
   decimalLatitude  REAL
-  ecosystemType  VARCHAR
   geographicLocation  VARCHAR
   studySite  VARCHAR
   verbatimElevation  REAL
@@ -259,72 +205,47 @@ Table foodwebs {
 }
 
 Table metabolic_types {
-  ID INTEGER [primary key]
-  type VARCHAR
+  metabolicTypeID INTEGER [primary key]
+  metabolicType VARCHAR
 }
 
-Table species {
-  ID INTEGER [primary key]
-  metabolicTypeID INTEGER [ref: > metabolic_types.ID]
+Table movement_types {
+  movementTypeID INTEGER [primary key]
+  movementType VARCHAR
+}
+
+Table taxa {
+  taxonID INTEGER [primary key]
   acceptedTaxonName VARCHAR
   taxonRank VARCHAR
   taxonomicStatus VARCHAR
   vernacularName VARCHAR
-  taxonomicLevel VARCHAR
-}
-
-Table interaction_methods {
-  ID INTEGER [primary key]
-  method VARCHAR
 }
 
 Table references {
-  ID INTEGER [primary key]
+  referenceID INTEGER [primary key]
   reference VARCHAR
 }
 
-Table interactions {
-  ID INTEGER [primary key]
-  foodwebID INTEGER [ref: > foodwebs.ID]
-  resourceID INTEGER [ref: > species.ID]
-  consumerID INTEGER [ref: > species.ID]
-  typeID INTEGER [ref:> interaction_types.ID]
-  referenceID INTEGER [ref: > references.ID]
-  methodID INTEGER [ref: > interaction_methods.ID]
-  interactionDimensionality VARCHAR
-  interactionMethod VARCHAR
-  interactionRemarks VARCHAR
-  basisOfRecord VARCHAR
-}
-
-Table movements {
-  ID INTEGER [primary key]
-  type VARCHAR
-}
-
-Table interaction_types {
-  ID INTEGER [primary key]
-  type VARCHAR
-}
-
 Table life_stages {
-  ID INTEGER [primary key]
+  lifeStageID INTEGER [primary key]
   lifeStage VARCHAR
 }
 
 Table size_methods {
-  ID INTEGER [primary key]
-  method VARCHAR
+  sizeMethodID INTEGER [primary key]
+  sizeMethod VARCHAR
 }
 
 Table communities {
-  ID INTEGER [primary key]
-  speciesID INTEGER [ref: > species.ID]
-  foodwebID INTEGER [ref: > foodwebs.ID]
-  lifestageID INTEGER [ref: > life_stages.ID]
-  movementID INTEGER [ref: > movements.ID]
-  referenceID INTEGER [ref: > references.ID]
-  sizeMethodID INTEGER [ref: > size_methods.ID]
+  communityID INTEGER [primary key]
+  foodwebID INTEGER [ref: > foodwebs.foodwebID]
+  taxonID INTEGER [ref: > taxa.taxonID]
+  lifestageID INTEGER [ref: > life_stages.lifeStageID]
+  metabolicTypeID INTEGER [ref: > metabolic_types.metabolicTypeID]
+  movementTypeID INTEGER [ref: > movement_types.movementTypeID]
+  sizeMethodID INTEGER [ref: > size_methods.sizeMethodID]
+  referenceID INTEGER [ref: > references.referenceID]
   lowestMass REAL
   highestMass REAL
   meanMass REAL
@@ -332,6 +253,29 @@ Table communities {
   longestLength REAL
   meanLength REAL
   biomass REAL
+}
+
+Table interaction_types {
+  interactionTypeID INTEGER [primary key]
+  interactionType VARCHAR
+}
+
+Table interaction_methods {
+  interactionMethodID INTEGER [primary key]
+  interactionMethod VARCHAR
+}
+
+Table interactions {
+  interactionID INTEGER [primary key]
+  foodwebID INTEGER [ref: > foodwebs.foodwebID]
+  resourceID INTEGER [ref: > taxa.taxonID]
+  consumerID INTEGER [ref: > taxa.taxonID]
+  interactionTypeID INTEGER [ref:> interaction_types.interactionTypeID]
+  referenceID INTEGER [ref: > references.referenceID]
+  methodID INTEGER [ref: > interaction_methods.interactionMethodID]
+  interactionDimensionality INTEGER
+  interactionRemarks VARCHAR
+  basisOfRecord VARCHAR
 }
 ```
 
