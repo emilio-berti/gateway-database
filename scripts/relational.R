@@ -1,19 +1,29 @@
 suppressPackageStartupMessages(library(tidyverse))
+suppressPackageStartupMessages(library(testthat))
 options(readr.show_progress = FALSE)
 
-data_dir <- "data"
+data_dir <- "data/v.2.0"
 
 if (!interactive()) {
   args <- commandArgs(trailingOnly = TRUE)
   db <- args[1]
 } else {
-  db <- file.path(data_dir, "gateway-v.2.0.csv")
+  db <- file.path(data_dir, "GATEWAy-v.2.0.csv")
 }
 datapath <- strsplit(db, "/")[[1]]
 datapath <- paste(datapath[1 : (length(datapath) - 1)], collapse = "/")
 stopifnot("db" %in% ls())
 
 db <- read_csv(db, show_col_types = FALSE)
+
+test_that(
+  "Rows are unique",
+  expect_equal(
+    db |> nrow(),
+    db |> distinct_all() |> nrow()
+  )
+)
+
 db$foodweb.name <- ifelse(
   grepl("grand caricaie marsh", db$foodweb.name),  # foodweb name sampled in multiple ecosystems
   paste(db$foodweb.name, db$ecosystem.type, sep = " - "),
@@ -49,6 +59,14 @@ foodwebs <- db |>
   ) |> 
   rownames_to_column(var = "ID") |> 
   relocate("ID", .before = "foodwebName")
+
+test_that(
+  "Rows are unique",
+  expect_equal(
+    foodwebs |> nrow(),
+    foodwebs |> distinct_all() |> nrow()
+  )
+)
 
 foodwebs |> write_csv(file.path(datapath, "foodwebs.csv"))
 
@@ -88,6 +106,14 @@ species <- species |>
   distinct_all() |> 
   rownames_to_column(var = "ID") |> 
   mutate(across(where(is.numeric), ~ifelse(is.na(.x), -9999, .x)))
+
+test_that(
+  "Rows are unique",
+  expect_equal(
+    species |> nrow(),
+    species |> distinct_all() |> nrow()
+  )
+)
 
 species |> write_csv(file.path(datapath, "species.csv"))
 
@@ -207,5 +233,12 @@ interactions <- bind_cols(
   mutate(across(where(is.numeric), ~ifelse(is.na(.x), -9999, .x)))
 
 stopifnot(nrow(db) == nrow(interactions))
+test_that(
+  "Rows are unique",
+  expect_equal(
+    interactions |> nrow(),
+    interactions |> distinct_all() |> nrow()
+  )
+)
 
 interactions |> write_csv(file.path(datapath, "interactions.csv"))

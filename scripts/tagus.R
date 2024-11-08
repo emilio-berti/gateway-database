@@ -32,11 +32,20 @@ d <- lapply(sheets, function(s) {
 })
 d <- d |> 
   bind_rows() |> 
-  drop_na()
+  drop_na() |>
+  distinct_all() #duplicates in original tables
 
 test_that(
   "All foodwebs loaded",
   expect_identical(sheets, d |> pull(foodweb.name) |> unique())
+)
+
+test_that(
+  "Rows are unique",
+  expect_equal(
+    d |> nrow(),
+    d |> distinct_all() |> nrow()
+  )
 )
 
 # add coordinates ---------
@@ -80,5 +89,13 @@ d <- d |>
     ecosystem.type = "marine",
     geographic.location = "Tagus estuary (Lisboa)"
   )
+
+test_that(
+  "Rows are unique",
+  expect_equal(
+    d |> nrow(),
+    d |> distinct_all() |> nrow()
+  )
+)
 
 d |> write_csv("newdata/tagus.csv")

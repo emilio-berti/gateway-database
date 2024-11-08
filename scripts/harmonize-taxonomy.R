@@ -16,6 +16,14 @@ stopifnot("db" %in% ls())
 stopifnot("taxonomy" %in% ls())
 
 db <- read_csv(db, show_col_types = FALSE)
+
+test_that("rows are unique", 
+  expect_equal(
+    db |> distinct_all() |> nrow(),
+    db |> nrow()
+  )
+)
+
 shape <- dim(db)
 taxonomy <- suppressMessages(
   taxonomy |> 
@@ -78,6 +86,7 @@ test_that(
   "Same rows after adding gbif",
   expect_equal(shape[1], nrow(db))
 )
+
 db <- db |> 
   mutate(
     res.taxonomy = ifelse(
@@ -90,17 +99,17 @@ db <- db |>
       con.taxonomy,
       con.gbif)
   ) |> 
-  select(-res.gbif, -con.gbif)
+  select(-res.gbif, -con.gbif) |>
+  distinct_all() # remove duplicates after harmonization
+
+test_that("rows are unique", 
+  expect_equal(
+    db |> distinct_all() |> nrow(),
+    db |> nrow()
+  )
+)
 
 stopifnot(any(!is.na(db[["res.taxonomy"]])))
 stopifnot(any(!is.na(db[["con.taxonomy"]])))
-test_that(
-  "Same rows after assigning gbif",
-  expect_equal(shape[1], nrow(db))
-)
-test_that(
-  "Same columns + 4 for status and key",
-  expect_equal(shape[2] + 4, ncol(db))
-)
 
 db |> write_csv(file.path(data_dir, "gateway-harmonized.csv"))

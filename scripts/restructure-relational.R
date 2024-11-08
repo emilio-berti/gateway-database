@@ -6,7 +6,7 @@ if (!interactive()) {
   args <- commandArgs(trailingOnly = TRUE)
   datadir <- args[1]
 } else {
-  datadir <- "data"
+  datadir <- "data/v.2.0"
 }
 
 # read tables and standardize NAs ----------
@@ -16,14 +16,34 @@ species <- read_csv(
   mutate(across(everything(), ~ifelse(
     grepl("^na$", .x, ignore.case = TRUE), NA, .x
   ))) |> 
-  select(-taxonomicLevel)
+  select(-taxonomicLevel) |>
+  mutate(communityID = ID) |>
+  select(-"ID")
+
+test_that(
+  "Rows are unique",
+  expect_equal(
+    species |> nrow(),
+    species |> distinct_all() |> nrow()
+  )
+)
 
 interactions <- read_csv(
   file.path(datadir, "interactions.csv"), show_col_types = FALSE
 ) |> 
   mutate(across(everything(), ~ifelse(
     grepl("^na$", .x, ignore.case = TRUE), NA, .x
-  )))
+  ))) |>
+  mutate(interactionID = ID) |>
+  select(-"ID")
+
+test_that(
+  "Rows are unique",
+  expect_equal(
+    interactions |> nrow(),
+    interactions |> distinct_all() |> nrow()
+  )
+)
 
 foodwebs <- read_csv(
   file.path(datadir, "foodwebs.csv"), show_col_types = FALSE
@@ -34,6 +54,14 @@ foodwebs <- read_csv(
   mutate(foodwebID = ID) |> 
   relocate(foodwebID, .before = "ID") |> 
   select(-ID)
+
+test_that(
+  "Rows are unique",
+  expect_equal(
+    foodwebs |> nrow(),
+    foodwebs |> distinct_all() |> nrow()
+  )
+)
 
 # reference table ------
 references <- tibble(
@@ -146,62 +174,41 @@ species <- species |>
 communities <- species
 
 species <- species |> 
-  select(
-    ID,
-    acceptedTaxonName,
-    vernacularName,
-    taxonRank,
-    taxonomicStatus
-  ) |> 
   group_by(
     acceptedTaxonName,
     vernacularName,
     taxonRank,
     taxonomicStatus
   ) |> 
-  mutate(speciesID = cur_group_id()) |> 
+  mutate(taxonID = cur_group_id()) |> 
   ungroup() |> 
-  mutate(across(contains("ID"), ~as.numeric(.x)))
-
+  mutate(across(contains("ID"), ~as.numeric(.x))) |>
+  relocate(taxonID, .before = 1)
 
 # in the old database, get information to know in which food webs species occur
-communities <- communities |> 
-  left_join(
-    interactions |> 
-      select(foodwebID, resourceID, consumerID) |> 
-      pivot_longer(
-        cols = c("resourceID", "consumerID"),
-        names_to = "taxon",
-        values_to = "ID"
-      ) |> 
-      select(-"taxon") |> 
-      distinct_all(),
-    by = "ID"
-  )
-
-communities <- communities |> 
-  left_join(
-    species,
-    by = join_by(ID, acceptedTaxonName, taxonRank, taxonomicStatus, vernacularName)
-  ) |> 
-  select(-ID, -acceptedTaxonName, -taxonRank, -taxonomicStatus, -vernacularName) |> 
+communities <- interactions |>
+  pivot_longer(
+    cols = c("resourceID", "consumerID"),
+    values_to = "communityID"
+  ) |>
+  distinct_all() |>
+  left_join(communities, by = "communityID") |>
   select(
-    foodwebID, speciesID, lifeStageID, metabolicTypeID, movementTypeID,
-    sizeMethodID, referenceID,
-    lowestMass, highestMass, meanMass,
-    shortestLength, longestLength, meanLength
-  ) |> 
-  distinct_all() |> 
-  mutate(biomass = -999) |> 
-  arrange(foodwebID, speciesID)
+    "communityID", "foodwebID", 
+    "metabolicTypeID", "movementTypeID", "lifeStageID",
+    "sizeMethodID", "referenceID",
+    "lowestMass", "highestMass", "meanMass",
+    "shortestLength", "longestLength", "meanLength"
+  ) |>
+  mutate(biomass = 0) |>
+  distinct_all() |>
+  left_join(species |> select(communityID, taxonID), by = "communityID") |>
+  relocate(taxonID, .after = communityID) |>
+  arrange(foodwebID, taxonID, communityID) |>
+  rowid_to_column(var = "ID") |>
+  relocate(ID, .before = 1)
 
 interactions <- interactions |>
-  left_join(species |> transmute(sID = ID, speciesID), join_by("resourceID" == "sID")) |> 
-  mutate(resourceID = speciesID) |> 
-  select(-speciesID) |> 
-  left_join(species |> transmute(sID = ID, speciesID), join_by("consumerID" == "sID")) |> 
-  mutate(consumerID = speciesID) |> 
-  select(-speciesID) |> 
   left_join(interaction_types, join_by(interactionType)) |> 
   select(-interactionType) |> 
   left_join(references, by = c('interactionReference' = 'reference')) |> 
@@ -213,52 +220,53 @@ interactions <- interactions |>
       interactionDimensionality == "3d" ~ 3,
       .default = NA
   )) |> 
-  relocate(interactionRemarks, .after = "interactionMethodID")
+  relocate(interactionRemarks, .after = "interactionMethodID") |>
+  relocate(interactionID, .before = 1)
 
 species <- species |> 
-  relocate(speciesID, .before = "ID") |> 
-  relocate(vernacularName, .after = "taxonomicStatus") |> 
-  select(-ID) |> 
+  select(
+    "taxonID", "acceptedTaxonName",
+    "taxonRank", "taxonomicStatus",
+    "vernacularName"
+  ) |>
   distinct_all()
 
-test_that("test species size", 
+test_that("taxa are unique", 
+  expect_equal(max(table(species$taxonID)), 1)
+)
+
+test_that(
+  "Rows are unique",
   expect_equal(
-    species |> distinct_all() |> nrow(),
-    species |> nrow()
+    communities |> nrow(),
+    communities |> distinct_all() |> nrow()
   )
 )
 
-test_that("test communities size",
+test_that(
+  "Rows are unique",
   expect_equal(
-    communities |> distinct_all() |> nrow(),
-    communities |> nrow()
+    interactions |> nrow(),
+    interactions |> distinct_all() |> nrow()
   )
 )
 
-test_that("test interactions size I",
+test_that(
+  "Dimensions are kept",
   expect_equal(
-    interactions |> distinct_all() |> nrow(),
-    interactions |> nrow()
+    interactions |> nrow(),
+    read_csv(file.path(datadir, "GATEWAy-v.2.0.csv")) |> nrow()
   )
 )
 
-
-test_that("test interactions size II", 
-  expect_equal(
-    suppressMessages(read_csv("data/interactions.csv")) |> nrow(),
-    interactions |> nrow()
-  )
-)
-
-
-write_csv(foodwebs, file.path(datadir, "v.2.0", "foodwebs.csv"))
-write_csv(species, file.path(datadir, "v.2.0", "species.csv"))
-write_csv(communities, file.path(datadir, "v.2.0", "communities.csv"))
-write_csv(interactions, file.path(datadir, "v.2.0", "interactions.csv"))
-write_csv(references, file.path(datadir, "v.2.0", "references.csv"))
-write_csv(life_stages, file.path(datadir, "v.2.0", "lifestages.csv"))
-write_csv(movement_types, file.path(datadir, "v.2.0", "movement_types.csv"))
-write_csv(metabolic_types, file.path(datadir, "v.2.0", "metabolic_types.csv"))
-write_csv(interaction_types, file.path(datadir, "v.2.0", "interaction_types.csv"))
-write_csv(interaction_methods, file.path(datadir, "v.2.0", "interaction_methods.csv"))
-write_csv(size_methods, file.path(datadir, "v.2.0", "size_methods.csv"))
+write_csv(foodwebs, file.path(datadir, "foodwebs.csv"))
+write_csv(species, file.path(datadir, "species.csv"))
+write_csv(communities, file.path(datadir, "communities.csv"))
+write_csv(interactions, file.path(datadir, "interactions.csv"))
+write_csv(references, file.path(datadir, "references.csv"))
+write_csv(life_stages, file.path(datadir, "lifestages.csv"))
+write_csv(movement_types, file.path(datadir, "movement_types.csv"))
+write_csv(metabolic_types, file.path(datadir, "metabolic_types.csv"))
+write_csv(interaction_types, file.path(datadir, "interaction_types.csv"))
+write_csv(interaction_methods, file.path(datadir, "interaction_methods.csv"))
+write_csv(size_methods, file.path(datadir, "size_methods.csv"))

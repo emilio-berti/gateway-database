@@ -56,6 +56,13 @@ test_that(
 
 # write interactions to table ----------
 d <- d |> left_join(xy, by = "foodweb.name")
+test_that(
+  "Rows are unique",
+  expect_equal(
+    d |> nrow(),
+    d |> distinct_all() |> nrow()
+  )
+)
 d |> write_csv("newdata/mulder.csv")
 
 # literature sources ------
