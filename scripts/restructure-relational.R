@@ -200,7 +200,7 @@ communities <- interactions |>
     "lowestMass", "highestMass", "meanMass",
     "shortestLength", "longestLength", "meanLength"
   ) |>
-  mutate(biomass = 0) |>
+  mutate(biomass = -999) |>
   distinct_all() |>
   left_join(species |> select(communityID, taxonID), by = "communityID") |>
   relocate(taxonID, .after = communityID) |>

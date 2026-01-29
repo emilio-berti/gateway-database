@@ -54,8 +54,8 @@ foodwebs <- db |>
   select(all_of(lookup)) |> 
   distinct_all() |> 
   mutate(
-    verbatimElevation = ifelse(is.na(verbatimElevation), -9999, verbatimElevation),
-    verbatimDepth = ifelse(is.na(verbatimDepth), -9999, verbatimDepth)
+    verbatimElevation = ifelse(is.na(verbatimElevation), -999, verbatimElevation),
+    verbatimDepth = ifelse(is.na(verbatimDepth), -999, verbatimDepth)
   ) |> 
   rownames_to_column(var = "ID") |> 
   relocate("ID", .before = "foodwebName")
@@ -105,7 +105,7 @@ species <- species |>
   select(all_of(lookup)) |> 
   distinct_all() |> 
   rownames_to_column(var = "ID") |> 
-  mutate(across(where(is.numeric), ~ifelse(is.na(.x), -9999, .x)))
+  mutate(across(where(is.numeric), ~ifelse(is.na(.x), -999, .x)))
 
 test_that(
   "Rows are unique",
@@ -172,7 +172,7 @@ interaction_res <- db |>
   select(-matches("con[.]")) |> 
   rename_with(~sub("res[.]", "", .x)) |> 
   select(any_of(lookup)) |>
-  mutate(across(where(is.numeric), ~ifelse(is.na(.x), -9999, .x))) |> 
+  mutate(across(where(is.numeric), ~ifelse(is.na(.x), -999, .x))) |> 
   left_join(
     species,
     by = join_by(
@@ -188,7 +188,7 @@ interaction_con <- db |>
   select(-matches("re[.]")) |> 
   rename_with(~sub("con[.]", "", .x)) |> 
   select(any_of(lookup)) |> 
-  mutate(across(where(is.numeric), ~ifelse(is.na(.x), -9999, .x))) |> 
+  mutate(across(where(is.numeric), ~ifelse(is.na(.x), -999, .x))) |> 
   left_join(
     species,
       by = join_by(
@@ -230,7 +230,7 @@ interactions <- bind_cols(
   ) |> 
   relocate("foodwebID", .before = "foodwebName") |> 
   select(-foodwebName) |> 
-  mutate(across(where(is.numeric), ~ifelse(is.na(.x), -9999, .x)))
+  mutate(across(where(is.numeric), ~ifelse(is.na(.x), -999, .x)))
 
 stopifnot(nrow(db) == nrow(interactions))
 test_that(
